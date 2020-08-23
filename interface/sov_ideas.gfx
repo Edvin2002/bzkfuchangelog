@@ -1,0 +1,47 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_industry_super"
+		texturefile = "gfx/interface/ideas/supervision.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_better_dream"
+		texturefile = "gfx/interface/ideas/dream.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pre_war"
+		texturefile = "gfx/interface/ideas/reserves.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_air_cult"
+		texturefile = "gfx/interface/ideas/air_cult.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_trans_pol"
+		texturefile = "gfx/interface/ideas/transpol.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_scientif_app"
+		texturefile = "gfx/interface/ideas/scientiff.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_reorg_ec"
+		texturefile = "gfx/interface/ideas/reorg.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_window"
+		texturefile = "gfx/interface/ideas/window.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_partisan_problem"
+		texturefile = "gfx/interface/ideas/partisan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_vasily_petushenko"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Andrey_smirnov"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_3.dds"
+	}
+	
+}

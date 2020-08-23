@@ -1,0 +1,177 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_SOV_CAS1_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_sukhoi2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_CAS1_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_sukhoi2k.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_CAS2_medium"
+		texturefile = "gfx/interface/technologies/SOV_cas_ilyushin2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_CAS2_medium"
+		texturefile = "gfx/interface/technologies/SOV_cas_generic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_CAS3_medium"
+		texturefile = "gfx/interface/technologies/SOV_cas_ilyushin10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_CAS3_medium"
+		texturefile = "gfx/interface/technologies/SOV_cas_generic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_polikarpov15bis.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_kochyerigin_shon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_polikarpov16.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_polikarpov153k.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_fighter2_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_yakovlev1b.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_fighter2_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_generic2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_fighter3_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_lavochkin7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_fighter3_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_yakovlev9k.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_jet_mikoyan-gurevich3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/SOV_jet_mikoyan-gurevich15.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_ilyushin3t.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_polikarpov5t.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_ilyushin4t_1940.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_generic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_tupolev2_1944.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_cv_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/SOV_nav_chyetverikov1m.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_kochyerigin6.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_petlyakov3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter_tupolev1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_tupolev_tb3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_tupolev_sb2m.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_petlyakov2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_tupolev2_1944.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_ilyushin3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_petlyakov8-1940.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/SOV_bomber_tupolev4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_jet_tupolev12.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/SOV_jet_ilyushin28.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_jet_tupolev16.dds"
+	}
+}

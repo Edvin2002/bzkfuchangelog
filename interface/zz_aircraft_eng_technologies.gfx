@@ -1,0 +1,182 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_ENG_CAS1_medium"
+		texturefile = "gfx/interface/technologies/ENG_cas_faireybattle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_CAS1_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_blackburnskua.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_CAS2_medium"
+		texturefile = "gfx/interface/technologies/ENG_cas_hawkertyphoon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_CAS2_medium"
+		texturefile = "gfx/interface/technologies/ENG_cas_generic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_CAS3_medium"
+		texturefile = "gfx/interface/technologies/ENG_cas_hawkertempest.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_CAS3_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_hawkerseafury.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_glostergladiator.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_hawkernimrod.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_fighter1_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_hawkerhurricane.dds"
+	}
+	# vanilla game has separate entry for equipment icon for some reason :|
+	SpriteType = {
+		name = "GFX_ENG_fighter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_hawkerhurricane.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_ENG_cv_fighter1_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_glosterseagladiator.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_fighter2_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_supermarinespitfire.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_fighter2_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_faireyfulmar.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_fighter3_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_supermarinespiteful.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_fighter3_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_faireyfirefly.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/ENG_jet_glostermeteor.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/ENG_jet_hawkerhunter.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_vickersvildebeest.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_faireyswordfish.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_bristolbeaufort.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_faireybarracuda.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_bristolbrigand.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_cv_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/ENG_nav_blackburnfirebrand.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_westlandwhirlwind.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_bristolbeaufighter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/ENG_fighter_dehavillandmosquito.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_handleyheyford.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_armstrongwhitley.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_vickerswellington.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_dehavillandmosquito.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/ENG_jet_generic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/ENG_jet_englishelectriccanberra.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_handleyhalifax.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_avrolancaster.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/ENG_bomber_avrolincoln.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ENG_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/ENG_jet_vickersvaliant.dds"
+	}
+}

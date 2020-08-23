@@ -1,0 +1,11 @@
+
+state={
+	id=273
+	name="STATE_273"
+	state_category = pastoral
+
+	provinces={
+		1057 1994 4191 4962 5004 7985 10754 10884 12022 12082 12866 
+	}
+	manpower=1
+}

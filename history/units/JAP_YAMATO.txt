@@ -1,0 +1,22 @@
+units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "JIN Yamato"			
+		naval_base = 9998 # Clydebank
+		task_force = {
+			name = "JIN Yamato"
+			location = 9998 # Clydebank
+			ship = { name = "JIN Yamato" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato" } } }
+		}
+	}
+	fleet = {
+		name = "JIN Musashi"			
+		naval_base = 9998 # Clydebank
+		task_force = {
+			name = "JIN Musashi"
+			location = 9998 # Clydebank
+			ship = { name = "JIN Musashi" definition = battleship equipment = { ship_hull_super_heavy_1 = { amount = 1 owner = JAP version_name = "Yamato" } } }
+		}
+	}
+	
+}

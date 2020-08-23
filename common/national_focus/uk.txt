@@ -1,0 +1,4252 @@
+focus_tree = {
+	id = british_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	default = no
+	focus = {
+		id = crypto_bomb_focus
+		icon = GFX_focus_generic_cryptologic_bomb
+		cost = 10
+		x = 0
+		y = 0
+			available = {
+					has_war_with = GER
+					POL = {
+							NOT = {
+									is_in_faction_with = GER
+								}
+						}
+				}
+			#We assume POL will help vs Germany unless they are allied to them
+			bypass = {
+					OR = {
+							AND = {
+									has_war_with = GER
+									POL = {
+											is_in_faction_with = GER# If POL is in GER's faction, no help for us
+										}
+								}
+							AND = {
+									has_war = yes
+									is_in_faction_with = USA
+								}
+							GER = {
+									exists = no
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = codebreaking_bonus
+							bonus = 1.0
+							uses = 3
+							category = decryption_tech
+							category = computing_tech
+						}
+				}
+
+	}
+	focus = {
+		id = limited_rearmament_focus
+		icon = GFX_housing
+		cost = 10
+		x = 5
+		y = 0
+			ai_will_do = {
+					factor = 1
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = construction_effort_tt
+							NOT = {
+									any_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			complete_tooltip = {
+					every_state = {
+							limit = {
+									has_state_flag = ENG_limited_rearmament_focus_2IC
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = ENG_limited_rearmament_focus_2IC
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = ENG_limited_rearmament_focus_2IC
+						}
+				}
+
+	}
+	focus = {
+		id = uk_empire_focus
+		icon = GFX_Goal_House_of_Commons
+		cost = 5
+		x = 28
+		y = 0
+			available = {
+					NOT = {
+							has_government = communism
+						}
+					num_subjects > 0
+				}
+			offset = {
+					x = -2
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							has_completed_focus = ENG_concessions_to_the_trade_unions
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_stability = 0.1
+					custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
+				}
+
+	}
+	focus = {
+		id = ENG_steady_as_she_goes
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5
+		x = 38
+		y = 0
+			available = {
+
+}
+			continue_if_invalid = yes
+			offset = {
+					x = -7
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							OR = {
+									has_country_flag = ENG_abdication_crisis_normal_marriage
+									has_country_flag = ENG_abdication_crisis_morganatic_marriage
+								}
+						}
+				}
+			completion_reward = {
+					add_timed_idea = {
+							idea = ENG_steady_as_she_goes_idea
+							days = 365
+						}
+				}
+
+	}
+	focus = {
+		id = Operation_Crusader
+		icon = GFX_goal_tank3
+		cost = 0
+		prerequisite = {
+			focus = uk_jet_focus
+		}
+		x = 5
+		y = 3
+			available = {
+					ENG = {
+							controls_state = 446
+						}
+					NOT = {
+							ENG = {
+									controls_state = 452
+								}
+						}
+				}
+			completion_reward = {
+					add_timed_idea = {
+							idea = ENG_OPERATION_HUSKY
+							days = 30
+						}
+					CAN = {
+							add_timed_idea = {
+									idea = COM_OPERATION_HUSKY
+									days = 30
+								}
+						}
+					SAF = {
+							add_timed_idea = {
+									idea = COM_OPERATION_HUSKY
+									days = 30
+								}
+						}
+					FRA = {
+							add_timed_idea = {
+									idea = COM_OPERATION_HUSKY
+									days = 30
+								}
+						}
+
+				}
+
+	}
+	focus = {
+		id = Operation_Overlord
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 0
+		x = 16
+		y = 0
+			available = {
+			OR = {
+					date > 1943.1.1
+					NOT = {
+							SOV = {
+									controls_state = 217
+								}
+						}
+					NOT = {
+							SOV = {
+									controls_state = 219
+								}
+						}
+						NOT = {
+
+						        date < 1942.1.1
+
+							ITA = {
+									controls_state = 451
+								}
+
+
+							ITA = {
+									controls_state = 450
+								}
+
+
+							ITA = {
+									controls_state = 448
+								}
+
+						}
+				}
+				}
+			completion_reward = {
+					add_timed_idea = {
+							idea = ENG_OPERATION_HUSKY1
+							days = 60
+						}
+					USA = { add_timed_idea = { idea = USA_OPERATION_HUSKY1 days = 60 } }
+			CAN = { add_timed_idea = { idea = COM_OPERATION_HUSKY1 days = 60 } }
+			SAF = { add_timed_idea = { idea = COM_OPERATION_HUSKY1 days = 60 } }
+			FRA = { add_timed_idea = { idea = COM_OPERATION_HUSKY1 days = 60 } }
+			AST = { add_timed_idea = { idea = COM_OPERATION_HUSKY1 days = 60 } }
+			NZL = { add_timed_idea = { idea = COM_OPERATION_HUSKY1 days = 60 } }
+
+				}
+
+	}
+	focus = {
+		id = uk_service_focus
+		icon = GFX_goal_ENG_africa_colonies
+		cost = 10
+		prerequisite = {
+			focus = uk_empire_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = uk_empire_focus
+			available = {
+
+}
+			offset = {
+					x = 2
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 150
+					navy_experience = 150
+					air_experience = 150
+					add_ideas = ENG_service_overseas_idea
+				}
+
+	}
+	focus = {
+		id = general_rearmament_focus
+		icon = GFX_arms_artillery_grenades
+		cost = 5
+		prerequisite = {
+			focus = limited_rearmament_focus
+		}
+		x = 4
+		y = 1
+		relative_position_id = limited_rearmament_focus
+			available = {
+					if = {
+							limit = {
+									has_dlc = "Man the Guns"
+								}
+							OR = {
+									date > 1938.2.1
+									has_war = yes
+									has_idea = ENG_no_further_appeasement_idea
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_dlc = "Man the Guns"
+										}
+								}
+							OR = {
+									date > 1938.2.1
+									has_war = yes
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+				}
+			continue_if_invalid = yes
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = british_austerity_idea
+				}
+
+	}
+	focus = {
+		id = uk_mediterranean_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 3
+		prerequisite = {
+			focus = uk_service_focus
+		}
+		x = 5
+		y = 1
+		relative_position_id = uk_service_focus
+			available = {
+					447 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									has_idea = ENG_fortify_the_empire_1
+								}
+							swap_ideas = {
+									remove_idea = ENG_fortify_the_empire_1
+									add_idea = ENG_fortify_the_empire_2
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_idea = ENG_fortify_the_empire_1
+										}
+									NOT = {
+											has_idea = ENG_fortify_the_empire_2
+										}
+								}
+							add_ideas = ENG_fortify_the_empire_1
+						}
+					447 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 3
+									province = 4076
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = naval_base
+									level = 2
+									province = 4076
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = air_base
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_home_defence
+		icon = GFX_Goal_Home_Defense
+		cost = 6
+		prerequisite = {
+			focus = ENG_steady_as_she_goes
+		}
+		x = 38
+		y = 1
+			offset = {
+					x = -5
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_war_support = 0.05
+					125 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 271
+											instant_build = yes
+										}
+								}
+						}
+					126 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 11374
+											instant_build = yes
+										}
+								}
+						}
+					127 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 3501
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 9458
+											instant_build = yes
+										}
+								}
+						}
+					123 = {
+							if = {
+									limit = {
+											is_controlled_by = ROOT
+										}
+									add_building_construction = {
+											type = coastal_bunker
+											level = 2
+											province = 540
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_prepare_for_the_inevitable
+		icon = GFX_prepare_industry
+		cost = 5
+		prerequisite = {
+			focus = ENG_home_defence
+		}
+		x = 38
+		y = 2
+			available = {
+			date > 1942.1.1
+}
+			offset = {
+					x = 1
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = ENG_prepare_for_the_inevitable_idea
+				}
+
+	}
+	focus = {
+		id = tizard_mission_focus
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 5
+		prerequisite = {
+			focus = crypto_bomb_focus
+		}
+		prerequisite = {
+			focus = radar_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = crypto_bomb_focus
+			available = {
+					has_government = democratic
+					any_other_country = {
+							has_war_with = ROOT
+							NOT = {
+									has_government = democratic
+								}
+							num_of_factories > 30
+						}
+					NOt = {
+							has_war_with = USA
+						}
+					USA = {
+							has_government = ROOT
+							has_war = no
+							NOT = {
+									OR = {
+											has_idea = undisturbed_isolation
+											has_idea = isolation
+										}
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					USA = {
+							country_event = britain.1
+						}
+				}
+
+	}
+	focus = {
+		id = maud_focus
+		icon = GFX_focus_wonderweapons
+		cost = 10
+		prerequisite = {
+			focus = tizard_mission_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = tizard_mission_focus
+			available = {
+					is_in_faction_with = USA
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = maud_focus
+							bonus = 1.0
+							uses = 1
+							category = nuclear
+						}
+				}
+
+	}
+
+	focus = {
+		id = ENG_tank_focus
+		icon = GFX_tanks_focus_2
+		cost = 1
+		prerequisite = {
+			focus = limited_rearmament_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = limited_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+				available = {
+				date > 1937.1.1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+				add_tech_bonus = {
+									name = med_armor_bonus
+									bonus = 2.0
+									ahead_reduction = 2
+									technology = basic_medium_tank
+								}
+				add_tech_bonus = {
+								name = land_doc_bonus
+								bonus = 9.99
+								uses = 3
+								category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = air_defense_focus
+		icon = GFX_focus_bo_bengal
+		cost = 5
+		prerequisite = {
+			focus = limited_rearmament_focus
+		}
+		x = -4
+		y = 1
+		relative_position_id = limited_rearmament_focus
+			available = {
+					if = {
+							limit = {
+									has_dlc = "Man the Guns"
+								}
+							OR = {
+									threat > 0.05
+									has_war = yes
+									has_idea = ENG_no_further_appeasement_idea
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_dlc = "Man the Guns"
+										}
+								}
+							OR = {
+									threat > 0.05
+									has_war = yes
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+				}
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = air_defense_focus_bypass_tt
+							NOT = {
+									any_owned_state = {
+											free_building_slots = {
+													building = anti_air_building
+													size > 0
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					air_experience = 100
+					if = {
+							limit = {
+									has_country_flag = air_defense_focus_built_max
+								}
+							custom_effect_tooltip = air_defense_focus_tt
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = air_defense_focus_built_max
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_air_defense_focus_built_2
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+								}
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											OR = {
+													123 = {
+															free_building_slots = {
+																	building = anti_air_building
+																	size > 1
+																}
+														}
+													125 = {
+															free_building_slots = {
+																	building = anti_air_building
+																	size > 1
+																}
+														}
+													127 = {
+															free_building_slots = {
+																	building = anti_air_building
+																	size > 1
+																}
+														}
+												}
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = anti_air_building
+															size > 1
+														}
+													OR = {
+															region = 1
+															region = 2
+															region = 3
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = anti_air_building
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_air_defense_focus_built_2
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = anti_air_building
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_air_defense_focus_built_2
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											OR = {
+													123 = {
+															free_building_slots = {
+																	building = anti_air_building
+																	size > 1
+																}
+														}
+													125 = {
+															free_building_slots = {
+																	building = anti_air_building
+																	size > 1
+																}
+														}
+													127 = {
+															free_building_slots = {
+																	building = anti_air_building
+																	size > 1
+																}
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = anti_air_building
+													size > 1
+												}
+											OR = {
+													region = 1
+													region = 2
+													region = 3
+												}
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_air_defense_focus_built_2
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = anti_air_building
+													size > 1
+												}
+											OR = {
+													region = 1
+													region = 2
+													region = 3
+												}
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_air_defense_focus_built_2
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = anti_air_building
+													size > 1
+												}
+											OR = {
+													region = 1
+													region = 2
+													region = 3
+												}
+										}
+									add_building_construction = {
+											type = anti_air_building
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_air_defense_focus_built_2
+								}
+						}
+					if = {
+							limit = {
+									OR = {
+											123 = {
+													free_building_slots = {
+															building = anti_air_building
+															size > 1
+														}
+												}
+											125 = {
+													free_building_slots = {
+															building = anti_air_building
+															size > 1
+														}
+												}
+											127 = {
+													free_building_slots = {
+															building = anti_air_building
+															size > 1
+														}
+												}
+										}
+								}
+							custom_effect_tooltip = air_defense_focus_tt
+							hidden_effect = {
+									123 = {
+											add_building_construction = {
+													type = anti_air_building
+													level = 5
+													instant_build = yes
+												}
+										}
+									125 = {
+											add_building_construction = {
+													type = anti_air_building
+													level = 5
+													instant_build = yes
+												}
+										}
+									127 = {
+											add_building_construction = {
+													type = anti_air_building
+													level = 5
+													instant_build = yes
+												}
+										}
+									set_country_flag = air_defense_focus_built_max
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = radar_focus
+		icon = GFX_goal_generic_radar
+		cost = 10
+		prerequisite = {
+			focus = air_defense_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = air_defense_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					air_experience = 25
+					add_tech_bonus = {
+							name = radar_focus
+							bonus = 1.5
+							uses = 3
+							category = radar_tech
+						}
+				}
+
+	}
+	focus = {
+		id = shadow_scheme_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = limited_rearmament_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = limited_rearmament_focus
+			available = {
+					if = {
+							limit = {
+									has_dlc = "Man the Guns"
+								}
+							OR = {
+									threat > 0.05
+									has_war = yes
+									has_idea = ENG_no_further_appeasement_idea
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_dlc = "Man the Guns"
+										}
+								}
+							OR = {
+									threat > 0.05
+									has_war = yes
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+				}
+			continue_if_invalid = yes
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					custom_effect_tooltip = shadow_scheme_focus_tt
+					add_ideas = wartime_industry_focus
+				}
+
+	}
+	focus = {
+		id = uk_industrial_focus
+		text = industrial_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = shadow_scheme_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = shadow_scheme_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 1.5
+							uses = 1
+							category = industry
+						}
+				}
+
+	}
+	focus = {
+		id = uk_extra_tech_slot
+		text = extra_tech_slot
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = uk_industrial_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = uk_industrial_focus
+			available_if_capitulated = yes
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = ENG_special_air_service
+		icon = GFX_focus_eng_special_air_service
+		cost = 5
+		prerequisite = {
+			focus = general_rearmament_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = general_rearmament_focus
+			available = {
+
+}
+			continue_if_invalid = yes
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_ideas = ENG_special_air_service_idea
+				}
+
+	}
+	focus = {
+		id = royal_ordinance_focus
+		icon = GFX_prepare_industry
+		cost = 10
+		prerequisite = {
+			focus = uk_industrial_focus
+		}
+		x = -1
+		y = 2
+		relative_position_id = uk_industrial_focus
+			available = {
+					if = {
+							limit = {
+									has_dlc = "Man the Guns"
+								}
+							OR = {
+									any_other_country = {
+											has_war_with = ROOT
+											num_of_factories > 30
+										}
+									GER = {
+											has_completed_focus = GER_rhineland
+										}
+									threat > 0.2
+									has_idea = ENG_no_further_appeasement_idea
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_dlc = "Man the Guns"
+										}
+								}
+							OR = {
+									any_other_country = {
+											has_war_with = ROOT
+											num_of_factories > 30
+										}
+									GER = {
+											has_completed_focus = GER_rhineland
+										}
+									threat > 0.2
+									NOT = {
+											has_government = democratic
+										}
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			continue_if_invalid = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = production_effort_tt
+							NOT = {
+									any_owned_state = {
+											is_in_home_area = yes
+											free_building_slots = {
+													building = arms_factory
+													size > 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					every_state = {
+							limit = {
+									has_state_flag = royal_ordinance_focus_2AF
+								}
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = arms_factory
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									is_in_home_area = yes
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = arms_factory
+									level = 4
+									instant_build = yes
+								}
+							set_state_flag = royal_ordinance_focus_2AF
+						}
+					random_owned_controlled_state = {
+							limit = {
+									is_in_home_area = yes
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = royal_ordinance_focus_2AF
+						}
+					random_owned_controlled_state = {
+							limit = {
+									is_in_home_area = yes
+									free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 4
+									instant_build = yes
+								}
+							set_state_flag = royal_ordinance_focus_2AF
+						}
+					random_owned_controlled_state = {
+							limit = {
+									is_in_home_area = yes
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = royal_ordinance_focus_2AF
+						}
+				}
+
+	}
+	focus = {
+		id = uk_small_arms_focus
+		icon = GFX_focus_eng_the_sun_never_sets
+		cost = 5
+		prerequisite = {
+			focus = royal_ordinance_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = royal_ordinance_focus
+			ai_will_do = {
+					factor = 1
+				}
+	completion_reward = {
+					ENG = {
+			transfer_state = 550
+			transfer_state = 271
+			transfer_state = 559
+				}
+
+	}
+	}
+	focus = {
+		id = UK_secret_focus
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		prerequisite = {
+			focus = royal_ordinance_focus
+		}
+		prerequisite = {
+			focus = maud_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = royal_ordinance_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = UK_secret_focus
+							bonus = 1.0
+							uses = 2
+							category = electronics
+						}
+					add_tech_bonus = {
+							name = UK_secret_focus
+							bonus = 1.0
+							uses = 2
+							category = rocketry
+						}
+					add_tech_bonus = {
+							name = UK_secret_focus
+							bonus = 1.0
+							uses = 1
+							category = nuclear
+						}
+				}
+
+	}
+	focus = {
+		id = air_rearmament_focus
+		icon = GFX_focus_chi_flying_tigers
+		cost = 5
+		prerequisite = {
+			focus = general_rearmament_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = general_rearmament_focus
+			ai_will_do = {
+					factor = 3
+				}
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = air_focus_bypass_tt
+							NOT = {
+									any_owned_state = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					every_state = {
+							limit = {
+									has_state_flag = air_rearmament_focus_2AirBase
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					air_experience = 200
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+									OR = {
+											region = 1
+											region = 2
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = air_rearmament_focus_2AirBase
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+									OR = {
+											region = 1
+											region = 2
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = air_rearmament_focus_2AirBase
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+									OR = {
+											region = 1
+											region = 2
+											region = 3
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = air_rearmament_focus_2AirBase
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+									OR = {
+											region = 1
+											region = 2
+											region = 3
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = air_rearmament_focus_2AirBase
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = air_base
+											size > 1
+										}
+									OR = {
+											region = 1
+											region = 2
+											region = 3
+										}
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = air_rearmament_focus_2AirBase
+						}
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+													OR = {
+															region = 1
+															region = 2
+															region = 3
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = air_rearmament_focus_2AirBase
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = air_rearmament_focus_2AirBase
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = air_rearmament_focus_2AirBase
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = air_rearmament_focus_2AirBase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_chiefs_of_staff_committee
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		cost = 10
+		prerequisite = {
+			focus = air_rearmament_focus
+		}
+		prerequisite = {
+			focus = naval_rearmament_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = air_rearmament_focus
+			available = {
+
+}
+			continue_if_invalid = yes
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					army_experience = 10
+					navy_experience = 10
+					air_experience = 10
+					add_ideas = ENG_chiefs_of_staff_committee_idea
+				}
+
+	}
+	focus = {
+		id = fighter_command_focus
+		icon = GFX_purge_airforce
+		cost = 5
+		prerequisite = {
+			focus = air_rearmament_focus
+		}
+		x = -1
+		y = 2
+		relative_position_id = air_rearmament_focus
+			ai_will_do = {
+					factor = 3
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					air_experience = 100
+					set_technology = {
+					fighter2 = 1
+					}
+				}
+
+	}
+	focus = {
+		id = bomber_command_focus
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		prerequisite = {
+			focus = air_rearmament_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = air_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					air_experience = 25
+					add_tech_bonus = {
+							name = bomber_command_focus
+							bonus = 1.0
+							uses = 2
+							category = cat_strategic_bomber
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = coastal_command_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5
+		prerequisite = {
+			focus = air_rearmament_focus
+		}
+		x = 1
+		y = 2
+		relative_position_id = air_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					air_experience = 25
+					add_tech_bonus = {
+							name = coastal_command_focus
+							bonus = 1.0
+							uses = 2
+							category = naval_bomber
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = aircraft_production_focus
+		icon = GFX_royal_airforce
+		cost = 5
+		prerequisite = {
+			focus = fighter_command_focus
+			focus = bomber_command_focus
+			focus = coastal_command_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = fighter_command_focus
+			ai_will_do = {
+					factor = 3
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = british_fighter_discount
+				}
+
+	}
+	focus = {
+		id = uk_jet_focus
+		icon = GFX_goal_infanterie_taktik
+		cost = 1
+		prerequisite = {
+			focus = ENG_tank_focus
+		}
+		x = 5
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+				load_oob = ENG_royal_tank
+				}
+
+	}
+	focus = {
+		id = naval_rearmament_focus
+		icon = GFX_goal_POL_navalfund
+		cost = 5
+		prerequisite = {
+			focus = general_rearmament_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = general_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			bypass = {
+					custom_trigger_tooltip = {
+							tooltip = naval_effort_tt
+							NOT = {
+									any_owned_state = {
+											free_building_slots = {
+													building = dockyard
+													size > 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					every_state = {
+							limit = {
+									has_state_flag = ENG_naval_rearmament_focus_1dockyard
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					navy_experience = 50
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 0
+											include_locked = yes
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+							set_state_flag = ENG_naval_rearmament_focus_1dockyard
+						}
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 0
+											include_locked = yes
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+							set_state_flag = ENG_naval_rearmament_focus_1dockyard
+						}
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 0
+											include_locked = yes
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+							set_state_flag = ENG_naval_rearmament_focus_1dockyard
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_anti_non_contact_committee
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10
+		prerequisite = {
+			focus = naval_rearmament_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = naval_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			allow_branch = {
+					has_dlc = "Man the Guns"
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = ENG_anti_non_contact_committee
+							bonus = 1.0
+							uses = 1
+							category = naval_minelaying
+						}
+					add_tech_bonus = {
+							name = ENG_anti_non_contact_committee
+							bonus = 1.0
+							uses = 2
+							category = naval_minesweeping
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_secure_the_imperial_shipping_routes
+		icon = GFX_goal_generic_large_fleet
+		cost = 5
+		prerequisite = {
+			focus = naval_rearmament_focus
+		}
+		prerequisite = {
+			focus = uk_service_focus
+		}
+		x = 4
+		y = 1
+		relative_position_id = naval_rearmament_focus
+			offset = {
+					x = -1
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = no
+			completion_reward = {
+					add_tech_bonus = {
+							name = ENG_secure_the_imperial_shipping_routes
+							bonus = 1.0
+							uses = 2
+							category = cl_tech
+						}
+					add_ideas = ENG_secure_the_imperial_shipping_routes
+				}
+
+	}
+	focus = {
+		id = uk_destroyer_focus
+		icon = GFX_convoy_focus
+		cost = 5
+		prerequisite = {
+			focus = naval_rearmament_focus
+		}
+		x = -1
+		y = 2
+		relative_position_id = naval_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 2
+							uses = 1
+							category = dd_tech
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_a_s_warfare
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5
+		prerequisite = {
+			focus = uk_destroyer_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = uk_destroyer_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			allow_branch = {
+					has_dlc = "Man the Guns"
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ENG_asw_warfare
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 2
+							category = asw_tech
+						}
+				}
+
+	}
+	focus = {
+		id = uk_convoy_focus
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+		prerequisite = {
+			focus = uk_destroyer_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = uk_destroyer_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = british_convoy_discount
+				}
+
+	}
+	focus = {
+		id = ENG_anti_submarine_training_school
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+		prerequisite = {
+			focus = uk_convoy_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = uk_convoy_focus
+			offset = {
+					x = 0
+					y = -1
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = ENG_anti_submarine_training_school
+							bonus = 1.0
+							uses = 2
+							category = convoy_defense_tree
+						}
+					add_ideas = ENG_anti_submarine_training_school
+				}
+
+	}
+	focus = {
+		id = uk_waves_focus
+		icon = GFX_Goal_HM_Royal_Navy
+		cost = 5
+		prerequisite = {
+			focus = naval_rearmament_focus
+		}
+		x = 1
+		y = 2
+		relative_position_id = naval_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = uk_waves_focus
+							bonus = 1.0
+							uses = 3
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = uk_carrier_focus
+		icon = GFX_base_strike_doc
+		cost = 5
+		prerequisite = {
+			focus = uk_waves_focus
+		}
+		mutually_exclusive = {
+			focus = uk_battleship_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = uk_waves_focus
+			ai_will_do = {
+					factor = 0.25
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = uk_carrier_focus
+							bonus = 2
+							uses = 1
+							category = cv_tech
+						}
+
+							set_technology = { cv_naval_bomber2 = 1}
+
+				}
+
+	}
+	focus = {
+		id = uk_battleship_focus
+		icon = GFX_ENG_battleship
+		cost = 5
+		prerequisite = {
+			focus = uk_waves_focus
+		}
+		mutually_exclusive = {
+			focus = uk_carrier_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = uk_waves_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 25
+					add_tech_bonus = {
+							name = uk_battleship_focus
+							bonus = 1.0
+							uses = 2
+							category = bb_tech
+						}
+				}
+
+	}
+	focus = {
+		id = uk_amphibious_focus
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+		prerequisite = {
+			focus = naval_rearmament_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = naval_rearmament_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = uk_amphibious_focus
+							bonus = 1.0
+							uses = 1
+							category = marine_tech
+						}
+					add_tech_bonus = {
+							name = uk_amphibious_focus
+							bonus = 1.0
+							uses = 2
+							category = tp_tech
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_expand_the_repair_yards
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = uk_battleship_focus
+			focus = uk_carrier_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = uk_battleship_focus
+			ai_will_do = {
+					factor = 1
+				}
+			allow_branch = {
+					has_dlc = "Man the Guns"
+				}
+			available_if_capitulated = yes
+			complete_tooltip = {
+					every_state = {
+							limit = {
+									has_state_flag = ENG_expand_the_repair_yards_2dockyard
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 1
+											include_locked = yes
+										}
+									is_core_of = ROOT
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = ENG_expand_the_repair_yards_2dockyard
+						}
+					add_ideas = ENG_expand_the_repair_yards
+				}
+
+	}
+	focus = {
+		id = ENG_vanguard
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 5
+		prerequisite = {
+			focus = uk_battleship_focus
+			focus = uk_carrier_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = uk_battleship_focus
+			ai_will_do = {
+					factor = 1
+				}
+			allow_branch = {
+					has_dlc = "Man the Guns"
+				}
+			available = {
+					date > 1941.1.1
+					has_tech = improved_ship_hull_heavy
+					has_full_control_of_state = 133
+				}
+			#has_tech = improved_heavy_battery
+			#has_tech = dp_secondary_battery
+			#has_tech = antiair5
+			available_if_capitulated = yes
+			completion_reward = {
+					set_technology = {
+							advanced_ship_hull_heavy = 1
+						}
+					navy_experience = 25
+					create_equipment_variant = {
+							name = "Vanguard"
+							type = ship_hull_heavy_4
+							parent_version = 0
+							modules = {
+									fixed_ship_battery_slot = ship_heavy_battery_3
+									fixed_ship_anti_air_slot = ship_anti_air_4
+									fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+									fixed_ship_radar_slot = ship_radar_3
+									fixed_ship_engine_slot = heavy_ship_engine_4
+									fixed_ship_secondaries_slot = dp_ship_secondaries
+									fixed_ship_armor_slot = ship_armor_bb_3
+									front_1_custom_slot = ship_heavy_battery_3
+									mid_1_custom_slot = ship_anti_air_4
+									mid_2_custom_slot = dp_ship_secondaries
+									mid_3_custom_slot = ship_airplane_launcher_2
+									rear_1_custom_slot = ship_heavy_battery_3
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_government = communism
+										}
+								}
+							133 = {
+									custom_effect_tooltip = ENG_vanguard_tt_hms
+								}
+							hidden_effect = {
+									load_oob = "ENG_vanguard_hms"
+								}
+						}
+					if = {
+							limit = {
+									has_government = communism
+								}
+							133 = {
+									custom_effect_tooltip = ENG_vanguard_tt_communism
+								}
+							hidden_effect = {
+									load_oob = "ENG_vanguard_communist"
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_rock_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 3
+		prerequisite = {
+			focus = uk_mediterranean_focus
+		}
+		x = -3
+		y = 1
+		relative_position_id = uk_mediterranean_focus
+			available = {
+					118 = {
+							is_owned_and_controlled_by = ENG
+						}
+				}
+			completion_reward = {
+					118 = {
+							add_building_construction = {
+									type = bunker
+									level = 4
+									province = 4135
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									level = 1
+									province = 4135
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_protect_suez
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = uk_mediterranean_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = uk_mediterranean_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					447 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			# Needs province based trigger to work properly
+			#bypass = {
+			# 447 = {
+			#  free_building_slots = {
+			#   building = coastal_bunker
+			#   size < 1
+			#  }
+			#  free_building_slots = {
+			#   building = naval_base
+			#   size < 1
+			#  }
+			#  free_building_slots = {
+			#   building = air_base
+			#   size < 1
+			#  }
+			#  free_building_slots = {
+			#   building = bunker
+			#   size < 1
+			#  }
+			# }
+			#}
+			completion_reward = {
+					447 = {
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 4076
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = air_base
+									level = 3
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 2
+									province = 1071
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_malta_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 3
+		prerequisite = {
+			focus = uk_mediterranean_focus
+		}
+		x = 2
+		y = 2
+		relative_position_id = uk_mediterranean_focus
+			available = {
+					116 = {
+							is_owned_and_controlled_by = ENG
+						}
+				}
+			available_if_capitulated = yes
+			# Needs province based trigger to work properly
+			#bypass = {
+			# 116 = {
+			#  free_building_slots = {
+			#   building = coastal_bunker
+			#   size < 2
+			#  }
+			#  free_building_slots = {
+			#   building = air_base
+			#   size < 1
+			#  }
+			# }
+			#}
+			completion_reward = {
+					116 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = coastal_bunker
+									level = 2
+									province = 12003
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = air_base
+									level = 3
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_colonial_focus
+		icon = GFX_ENG_conscription
+		cost = 5
+		prerequisite = {
+			focus = uk_service_focus
+		}
+		x = -5
+		y = 1
+		relative_position_id = uk_service_focus
+			available_if_capitulated = yes
+			completion_reward = {
+					add_ideas = { ENG_colonial_elite }
+				}
+
+	}
+	focus = {
+		id = uk_asia_focus
+		icon = GFX_goal_british_fortifications
+		cost = 3
+		prerequisite = {
+			focus = uk_colonial_focus
+		}
+		x = -4
+		y = 1
+		relative_position_id = uk_colonial_focus
+			available = {
+					336 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+					326 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			bypass = {
+					336 = {
+							free_building_slots = {
+									building = dockyard
+									size < 1
+									include_locked = yes
+								}
+						}
+					326 = {
+							free_building_slots = {
+									building = industrial_complex
+									size < 1
+									include_locked = yes
+								}
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									has_idea = ENG_fortify_the_empire_1
+								}
+							swap_ideas = {
+									remove_idea = ENG_fortify_the_empire_1
+									add_idea = ENG_fortify_the_empire_2
+								}
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_idea = ENG_fortify_the_empire_1
+										}
+									NOT = {
+											has_idea = ENG_fortify_the_empire_2
+										}
+								}
+							add_ideas = ENG_fortify_the_empire_1
+						}
+					336 = {
+							if = {
+									limit = {
+											CONTROLLER = {
+													OR = {
+															tag = ENG
+															is_subject_of = ENG
+														}
+												}
+											OWNER = {
+													OR = {
+															tag = ENG
+															is_subject_of = ENG
+														}
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = dockyard
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+					326 = {
+							if = {
+									limit = {
+											CONTROLLER = {
+													OR = {
+															tag = ENG
+															is_subject_of = ENG
+														}
+												}
+											OWNER = {
+													OR = {
+															tag = ENG
+															is_subject_of = ENG
+														}
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_burma_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 3
+		prerequisite = {
+			focus = uk_asia_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = uk_asia_focus
+			available = {
+
+					JAP = {
+							NOT = {
+									is_in_faction_with = ENG
+								}
+						}
+				}
+
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			bypass = {
+					431 = {
+							free_building_slots = {
+									building = infrastructure
+									size < 2
+								}
+						}
+					432 = {
+							free_building_slots = {
+									building = infrastructure
+									size < 2
+								}
+						}
+					430 = {
+							free_building_slots = {
+									building = infrastructure
+									size < 2
+								}
+							free_building_slots = {
+									building = air_base
+									size < 2
+								}
+
+						}
+				}
+			completion_reward = {
+					432 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 432
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 432
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+								}
+						}
+						430 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 430
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 430
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+								}
+						}
+						431 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 431
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 431
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+								}
+						}
+						435 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 435
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 435
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+								}
+						}
+						426 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 426
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 426
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+								}
+						}
+						427 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 427
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 427
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 5
+											instant_build = yes
+										}
+								}
+						}
+					429 = {
+							if = {
+									limit = {
+											OR = {
+													ENG = {
+															controls_state = 429
+														}
+													any_other_country = {
+															is_in_faction_with = ENG
+															controls_state = 429
+														}
+												}
+										}
+									add_building_construction = {
+											type = infrastructure
+											level = 3
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+										add_building_construction = {
+											type = naval_base
+									     level = 5
+									     province = 1349
+									     instant_build = yes
+										}
+								}
+						}
+
+					add_war_support = 0.05
+					if = {
+							limit = {
+									has_dlc = "Waking the Tiger"
+								}
+							unlock_decision_tooltip = CHI_expand_the_burma_road
+						}
+					CHI = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = burma_road_good
+								}
+							country_event = britain.4
+						}
+					YUN = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = burma_road_good
+								}
+							country_event = britain.5
+						}
+					JAP = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = burma_road_bad
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = singapore_focus
+		icon = GFX_goal_generic_fortify_city
+		cost = 4
+		prerequisite = {
+			focus = uk_asia_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = uk_asia_focus
+			available = {
+					336 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 25
+					336 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = coastal_bunker
+									level = 3
+									province = 12299
+									instant_build = yes
+								}
+							if = {
+									limit = {
+											CONTROLLER = {
+													NOT = {
+															tag = ENG
+														}
+												}
+										}
+									CONTROLLER = {
+											add_autonomy_ratio = {
+													value = -0.02
+													localization = singapore_focus
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = sp_landward_forts_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 4
+		prerequisite = {
+			focus = singapore_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = singapore_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					336 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			bypass = {
+					336 = {
+							free_building_slots = {
+									building = anti_air_building
+									size < 2
+								}
+						}
+				}
+			completion_reward = {
+					336 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = bunker
+									level = 4
+									province = 12299
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							if = {
+									limit = {
+											CONTROLLER = {
+													NOT = {
+															tag = ENG
+														}
+												}
+										}
+									CONTROLLER = {
+											add_autonomy_ratio = {
+													value = -0.02
+													localization = sp_landward_forts_focus
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = peninsular_focus
+		icon = GFX_goal_generic_construction2
+		cost = 2
+		prerequisite = {
+			focus = sp_landward_forts_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = sp_landward_forts_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					336 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					336 = {
+							add_building_construction = {
+									type = bunker
+									level = 3
+									province = 7329
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 3
+									province = 4310
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									level = 3
+									province = 7342
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							if = {
+									limit = {
+											CONTROLLER = {
+													NOT = {
+															tag = ENG
+														}
+												}
+										}
+									CONTROLLER = {
+											add_autonomy_ratio = {
+													value = -0.02
+													localization = peninsular_focus
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = hongkong_focus
+		icon = GFX_goal_generic_fortify_city
+		cost = 1
+		prerequisite = {
+			focus = uk_asia_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = uk_asia_focus
+			ai_will_do = {
+					factor = 0.25
+				}
+			available = {
+					326 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					navy_experience = 25
+					326 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = coastal_bunker
+									level = 3
+									province = 10062
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = hk_landward_forts_focus
+		icon = GFX_goal_generic_construct_military
+		cost = 4
+		prerequisite = {
+			focus = hongkong_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = hongkong_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					326 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			bypass = {
+					326 = {
+							free_building_slots = {
+									building = anti_air_building
+									size < 2
+								}
+						}
+				}
+			completion_reward = {
+					326 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = bunker
+									level = 4
+									province = 10062
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = hk_air_focus
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = hk_landward_forts_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = hk_landward_forts_focus
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					326 = {
+							CONTROLLER = {
+									OR = {
+											tag = ENG
+											is_subject_of = ENG
+										}
+								}
+						}
+				}
+			available_if_capitulated = yes
+			bypass = {
+					326 = {
+							free_building_slots = {
+									building = anti_air_building
+									size < 2
+								}
+							free_building_slots = {
+									building = air_base
+									size < 2
+								}
+						}
+				}
+			completion_reward = {
+					326 = {
+							add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = air_base
+									level = 4
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_china_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = hk_air_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = hk_air_focus
+			available = {
+					CHI = {
+							exists = yes
+						}
+					has_government = democratic
+				}
+			cancel = {
+					CHI = {
+							exists = no
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					event_target:WTT_current_china_leader = {
+							add_offsite_building = {
+									type = arms_factory
+									level = 2
+								}
+							add_opinion_modifier = {
+									target = ENG
+									modifier = democratic_leanings_good
+								}
+							add_timed_idea = {
+									idea = democratic_influence
+									days = 1095
+								}
+							country_event = {
+									id = generic.1
+								}
+							set_country_flag = ENG_influenced_by_britain_flag
+						}
+					every_other_country = {
+							limit = {
+									NOT = {
+											has_government = democratic
+										}
+									num_of_factories > 30
+								}
+							add_opinion_modifier = {
+									target = CHI
+									modifier = democratic_leanings_bad
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_commonwealth_focus
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5
+		prerequisite = {
+			focus = uk_colonial_focus
+		}
+		x = 4
+		y = 1
+		relative_position_id = uk_colonial_focus
+			available = {
+					OR = {
+							CAN = {
+									is_in_faction_with = ENG
+								}
+							SAF = {
+									is_in_faction_with = ENG
+								}
+							RAJ = {
+									is_in_faction_with = ENG
+								}
+							AST = {
+									is_in_faction_with = ENG
+								}
+							NZL = {
+									is_in_faction_with = ENG
+								}
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 150
+					CAN = {
+							if = {
+									limit = {
+											is_in_faction_with = ENG
+										}
+									add_opinion_modifier = {
+											target = ENG
+											modifier = ENG_commonwealth_ties
+										}
+								}
+						}
+					AST = {
+							if = {
+									limit = {
+											is_in_faction_with = ENG
+										}
+									add_opinion_modifier = {
+											target = ENG
+											modifier = ENG_commonwealth_ties
+										}
+								}
+						}
+					RAJ = {
+							if = {
+									limit = {
+											is_in_faction_with = ENG
+										}
+									add_opinion_modifier = {
+											target = ENG
+											modifier = ENG_commonwealth_ties
+										}
+								}
+						}
+					NZL = {
+							if = {
+									limit = {
+											is_in_faction_with = ENG
+										}
+									add_opinion_modifier = {
+											target = ENG
+											modifier = ENG_commonwealth_ties
+										}
+								}
+						}
+					SAF = {
+							if = {
+									limit = {
+											is_in_faction_with = ENG
+										}
+									add_opinion_modifier = {
+											target = ENG
+											modifier = ENG_commonwealth_ties
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_british_commonwealth_air_training_plan
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = uk_commonwealth_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = uk_commonwealth_focus
+			ai_will_do = {
+					factor = 3
+				}
+			available = {
+					OR = {
+							CAN = {
+									is_in_faction_with = ENG
+								}
+							SAF = {
+									is_in_faction_with = ENG
+								}
+							RAJ = {
+									is_in_faction_with = ENG
+								}
+							AST = {
+									is_in_faction_with = ENG
+								}
+							NZL = {
+									is_in_faction_with = ENG
+								}
+						}
+				}
+			bypass = {
+
+}
+			completion_reward = {
+					add_ideas = ENG_british_commonwealth_air_training_plan
+					every_country = {
+							limit = {
+									is_subject_of = ROOT
+									NOT = {
+											original_tag = SAF
+										}
+								}
+							add_ideas = ENG_british_commonwealth_air_training_plan
+						}
+					SAF = {
+							if = {
+									limit = {
+											is_subject_of = ROOT
+										}
+									add_ideas = ENG_joint_air_training_scheme
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_india_focus
+		icon = GFX_war_factory_green
+		cost = 5
+		prerequisite = {
+			focus = uk_commonwealth_focus
+		}
+		x = -3
+		y = 1
+		relative_position_id = uk_commonwealth_focus
+			available = {
+					is_in_faction_with = RAJ
+				}
+			available_if_capitulated = yes
+			bypass = {
+					RAJ = {
+							custom_trigger_tooltip = {
+									tooltip = construction_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_india_focus_2IC
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_india_focus_1IC
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_india_focus
+								}
+						}
+				}
+			completion_reward = {
+					RAJ = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_india_focus_2IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_india_focus_2IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_india_focus_1IC
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_india_focus
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_free_india_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = uk_india_focus
+		}
+		mutually_exclusive = {
+			focus = ENG_indian_autonomy1
+		}
+		x = -1
+		y = 1
+		relative_position_id = uk_india_focus
+			available = {
+					if = {
+							limit = {
+									has_dlc = "Together for Victory"
+								}
+							OR = {
+									AND = {
+											date > 1943.10.01
+											RAJ = {
+													is_subject_of = ENG
+													has_war = no
+												}
+										}
+									AND = {
+											NOT = {
+													has_government = democratic
+												}
+											RAJ = {
+													is_subject_of = ENG
+													has_war = no
+												}
+										}
+								}
+							else = {
+									has_global_flag = indian_national_army_setup
+									has_government = democratic
+									RAJ = {
+											is_puppet_of = ENG
+										}
+								}
+						}
+				}
+			#counters JAP's indian army focus
+			offset = {
+					x = 1
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									has_dlc = "Together for Victory"
+								}
+							ROOT = {
+									set_autonomy = {
+											target = RAJ
+											autonomy_state = autonomy_free
+										}
+								}
+							else = {
+									set_global_flag = indian_independence_promised
+									add_timed_idea = {
+											idea = indian_independence_promised_idea
+											days = 1460
+										}
+									RAJ = {
+											remove_ideas = RAJ_azad_hind
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_australia_focus
+		icon = GFX_war_factory_green
+		cost = 5
+		prerequisite = {
+			focus = uk_commonwealth_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = uk_commonwealth_focus
+			available = {
+					is_in_faction_with = AST
+				}
+			bypass = {
+					AST = {
+							exists = no
+						}
+				}
+			available_if_capitulated = yes
+			bypass = {
+					AST = {
+							custom_trigger_tooltip = {
+									tooltip = construction_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+							custom_trigger_tooltip = {
+									tooltip = naval_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = dockyard
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					AST = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_australia_focus_1IC
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = industrial_complex
+											level = 3
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_australia_focus_1IC
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_australia_focus
+								}
+						}
+				}
+			completion_reward = {
+					AST = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = industrial_complex
+											level = 3
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_australia_focus_1IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_australia_focus_1IC
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_australia_focus
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_new_zealand_focus
+		icon = GFX_war_factory_green
+		cost = 3
+		prerequisite = {
+			focus = uk_australia_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = uk_australia_focus
+			available = {
+					is_in_faction_with = NZL
+				}
+			available_if_capitulated = yes
+			bypass = {
+					NZL = {
+							custom_trigger_tooltip = {
+									tooltip = construction_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+							custom_trigger_tooltip = {
+									tooltip = naval_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = dockyard
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					NZL = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_new_zealand_focus_1IC
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_new_zealand_focus_2dockyards
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = dockyard
+											level = 2
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_new_zealand_focus_1dockyard
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = dockyard
+											level = 1
+											instant_build = yes
+										}
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_new_zealand_focus
+								}
+						}
+				}
+			completion_reward = {
+					NZL = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_new_zealand_focus_1IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_new_zealand_focus_1IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = dockyard
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_new_zealand_focus_2dockyards
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = dockyard
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_new_zealand_focus_1dockyard
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_new_zealand_focus
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_canada_focus
+		icon = GFX_war_factory_green
+		cost = 5
+		prerequisite = {
+			focus = uk_commonwealth_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = uk_commonwealth_focus
+			available = {
+					is_in_faction_with = CAN
+				}
+			available_if_capitulated = yes
+			bypass = {
+					CAN = {
+							custom_trigger_tooltip = {
+									tooltip = construction_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+							custom_trigger_tooltip = {
+									tooltip = naval_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					CAN = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_canada_focus_2IC
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = industrial_complex
+											level = 3
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_canada_focus_1IC
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_canada_focus
+								}
+						}
+				}
+			completion_reward = {
+					CAN = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = industrial_complex
+											level = 3
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_canada_focus_2IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_canada_focus_1IC
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_canada_focus
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = uk_south_africa_focus
+		icon = GFX_war_factory_green
+		cost = 5
+		prerequisite = {
+			focus = uk_commonwealth_focus
+		}
+		x = 2
+		y = 3
+		relative_position_id = uk_commonwealth_focus
+			available = {
+					is_in_faction_with = SAF
+				}
+			available_if_capitulated = yes
+			bypass = {
+					SAF = {
+							custom_trigger_tooltip = {
+									tooltip = construction_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = industrial_complex
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+							custom_trigger_tooltip = {
+									tooltip = naval_effort_tt
+									all_owned_state = {
+											free_building_slots = {
+													building = dockyard
+													size < 1
+													include_locked = yes
+												}
+										}
+								}
+						}
+				}
+			complete_tooltip = {
+					SAF = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_south_africa_focus_2IC
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_south_africa_focus_1IC
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							every_state = {
+									limit = {
+											has_state_flag = ENG_uk_south_africa_focus_1dockyard
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_south_africa_focus
+								}
+						}
+				}
+			completion_reward = {
+					SAF = {
+							add_opinion_modifier = {
+									target = ENG
+									modifier = aided_industry
+								}
+							random_owned_controlled_state = {
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+										}
+								}
+							random_owned_controlled_state = {
+									add_building_construction = {
+											type = infrastructure
+											level = 2
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 1
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+											type = industrial_complex
+											level = 2
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_south_africa_focus_2IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_south_africa_focus_1IC
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_south_africa_focus_1dockyard
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = industrial_complex
+													size > 0
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+											type = industrial_complex
+											level = 1
+											instant_build = yes
+										}
+									set_state_flag = ENG_uk_south_africa_focus_1dockyard
+								}
+							add_autonomy_ratio = {
+									value = -0.05
+									localization = uk_south_africa_focus
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = ENG_indian_autonomy1
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = uk_india_focus
+		}
+		mutually_exclusive = {
+			focus = uk_free_india_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = uk_india_focus
+			allow_branch = {
+					has_dlc = "Man the Guns"
+				}
+			available = {
+					RAJ = {
+							is_subject_of = ENG
+						}
+				}
+			continue_if_invalid = no
+			ai_will_do = {
+					factor = 1
+				}
+			#modifier = {
+			# factor = 0
+			#}
+			completion_reward = {
+					set_autonomy = {
+							target = RAJ
+							autonomy_state = autonomy_dominion
+						}
+					RAJ = {
+							add_timed_idea = {
+									idea = ENG_indian_autonomy_RAJ_idea
+									days = 730
+								}
+						}
+					custom_effect_tooltip = ENG_indian_autonomy_tt
+				}
+
+	}
+	focus = {
+		id = ENG_imperial_conference
+		icon = GFX_goal_ENG_Reinforce_the_Commonwealth
+		cost = 5
+		prerequisite = {
+			focus = uk_canada_focus
+		}
+		prerequisite = {
+			focus = uk_new_zealand_focus
+		}
+		prerequisite = {
+			focus = uk_south_africa_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = uk_new_zealand_focus
+			allow_branch = {
+					has_dlc = "Man the Guns"
+				}
+			available = {
+					CAN = {
+							is_subject_of = ENG
+							has_government = ROOT
+						}
+					AST = {
+							is_subject_of = ENG
+							has_government = ROOT
+						}
+					SAF = {
+							is_subject_of = ENG
+							has_government = ROOT
+						}
+				}
+			continue_if_invalid = no
+			ai_will_do = {
+					factor = 1
+				}
+			#modifier = {
+			# factor = 0
+			#}
+			completion_reward = {
+					add_political_power = 120
+					every_country = {
+							limit = {
+									OR = {
+											tag = ENG
+											AND = {
+													is_subject_of = ENG
+													tag = CAN
+												}
+											AND = {
+													is_subject_of = ENG
+													tag = SAF
+												}
+											AND = {
+													is_subject_of = ENG
+													tag = RAJ
+												}
+											AND = {
+													is_subject_of = ENG
+													tag = AST
+												}
+											AND = {
+													is_subject_of = ENG
+													tag = NZL
+												}
+										}
+								}
+							country_event = {
+									id = mtg_britain.82
+									hours = 6
+								}
+							hidden_effect = {
+									news_event = {
+											id = mtg_news.13
+											days = 1
+										}
+								}
+						}
+					custom_effect_tooltip = ENG_imperial_conference_tt
+					custom_effect_tooltip = ENG_indian_autonomy_tt
+				}
+
+	}
+	focus = {
+		id = ENG_issue_gasmasks
+		icon = GFX_goal_generic_construct_military
+		cost = 3
+		prerequisite = {
+			focus = ENG_home_defence
+		}
+		x = 41
+		y = 2
+			available = {
+					OR = {
+							threat > 0.2
+							has_war = yes
+						}
+				}
+			available_if_capitulated = yes
+			offset = {
+					x = 1
+					y = 0
+					trigger = {
+							NOT = {
+									has_dlc = "Man the Guns"
+								}
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_political_power = 150
+					add_war_support = 0.05
+					add_stability = 0.1
+				}
+
+	}
+	focus = {
+		id = ENG_military_training_act
+		icon = GFX_generic_farmer
+		cost = 1
+		prerequisite = {
+			focus = ENG_issue_gasmasks
+		}
+		x = 41
+		y = 3
+			available = {
+					OR = {
+							threat > 0.5
+							has_war = yes
+						}
+				}
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_political_power = 150
+					add_war_support = 0.1
+					add_stability = 0.05
+					remove_ideas = ENG_the_war_to_end_all_wars
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+
+	}
+}

@@ -1,0 +1,96 @@
+units = {
+division= {
+		name = "21. Armored Division"
+		location = 6732
+		division_template = "Armored Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "22. Armored Division"
+		location = 6732
+		division_template = "Armored Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	}

@@ -1,0 +1,44 @@
+spriteTypes = {	
+
+	#assembled locally together with hawk ii's
+	SpriteType = {
+		name = "GFX_CHI_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/CHI_fighter_curtisshawk3.dds"
+	}
+
+	#30 bought in late 1935, more purchased in following years to be assembled locally
+	SpriteType = {
+		name = "GFX_CHI_CAS1_medium"
+		texturefile = "gfx/interface/technologies/CHI_cas_vultee11.dds"
+	}
+
+	#large batches purchased, supplied by the ussr along with i-152s
+	SpriteType = {
+		name = "GFX_CHI_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CHI_fighter_polikarpov16.dds"
+	}
+
+	#used to bomb japanese ships on rivers during sino-japanese war
+	SpriteType = {
+		name = "GFX_CHI_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CHI_bomber_henschel123.dds"
+	}
+
+	#25 assembled locally in early 30s
+	SpriteType = {
+		name = "GFX_CHI_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/CHI_bomber_northrop2e.dds"
+	}
+
+	#large batches purchased, supplied by the ussr
+	SpriteType = {
+		name = "GFX_CHI_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CHI_bomber_tupolev2m.dds"
+	}
+
+	#purchased and supplied by the ussr
+	SpriteType = {
+		name = "GFX_CHI_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CHI_bomber_ilyushin3.dds"
+	}
+}

@@ -1,0 +1,13 @@
+
+
+congress_low_support_trigger = {
+
+}
+
+congress_medium_support_trigger = {
+
+}
+
+congress_high_support_trigger = {
+
+}

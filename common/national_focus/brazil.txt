@@ -1,0 +1,140 @@
+focus_tree = {
+	id = brazilian_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+
+	
+	reset_on_civilwar = no
+
+
+		focus = {
+		id = BRA_italy_ww2
+		icon = GFX_goal_generic_construction2
+		x = 5
+		y = 0
+
+
+		cost = 208.5
+
+		completion_reward = {
+		ITA = { country_event = {   id = pfu.35 }   }
+		}
+	}
+
+	focus = {
+		id = BRA_commit_seppuku
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+
+
+			prerequisite = {
+			focus = BRA_italy_ww2
+		}
+
+				relative_position_id = BRA_italy_ww2
+
+		cost = 109.3
+
+
+
+
+		available_if_capitulated = yes
+
+			completion_reward = {
+					GER = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										JAP = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										ITA = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										FRA = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										ENG = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										SPR = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										SOV = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										CAN = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										SAF = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										AST = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										RAJ = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										HUN = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										ROM = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+										USA = { 
+						add_timed_idea = {
+											idea = JAP_bzkfu
+											days = 999
+										}
+										}
+	}
+	
+	
+}
+}

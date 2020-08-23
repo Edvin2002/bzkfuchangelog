@@ -1,0 +1,70 @@
+### OOB ###
+division_template = {
+	name = "Royal Armor"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		medium_armor = { x = 0 y = 4 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }
+		medium_armor = { x = 1 y = 3 }
+		medium_armor = { x = 1 y = 4 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+		motorized = { x = 3 y = 3 }
+		medium_armor = { x = 4 y = 0 }
+		medium_armor = { x = 4 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }      # includes 1x AC comp, 1x L tank comp
+		recon = { x = 0 y = 1 }
+	}
+}
+
+
+units = {
+	division= {
+		name = "1.Royal Armored Division"
+		location = 4076  # Alexandria
+		division_template = "Royal Armor"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1
+	}
+	division= {
+		name = "2.Royal Armored Division"
+		location = 4076  # Alexandria
+		division_template = "Royal Armor"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1
+	}
+	division= {
+		name = "3.Royal Armored Division"
+		location = 4076  # Alexandria
+		division_template = "Royal Armor"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1
+	}
+	division= {
+		name = "4.Royal Armored Division"
+		location = 4076  # Alexandria
+		division_template = "Royal Armor"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1
+	}
+	division= {
+		name = "5.Royal Armored Division"
+		location = 4076  # Alexandria
+		division_template = "Royal Armor"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1
+	}
+}

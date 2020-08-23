@@ -1,0 +1,814 @@
+﻿###########################
+# Hungarian Events
+###########################
+
+add_namespace = DOD_hungary
+
+
+
+#Rapprochement with Little Entente - Hungary asks for permission to rearm
+country_event = {
+	id = DOD_hungary.30
+	title = DOD_hungary.30.t
+	desc = DOD_hungary.30.desc
+	picture = GFX_report_event_vienna_award_negotiations 
+	
+	is_triggered_only = yes
+
+	option = { #agree
+		name = DOD_hungary.30.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				threat > 20
+				factor = 2 #can't leave them alone out there
+			}
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 10 #by all means!
+			}
+			modifier = {
+				has_war_with = HUN
+				factor = 0 #lol
+			}
+			modifier = {
+				has_completed_focus = CZE_rapprochement_with_hungary
+				factor = 3
+			}
+		}
+
+		#FRA block
+		if = {
+			limit = {
+				tag = FRA
+			}
+			if = {
+				limit = {
+					country_exists = ROM
+				}
+				ROM = { country_event = DOD_hungary.30 }
+				else = {
+					if = {
+						limit = {
+							country_exists = YUG
+						}
+						YUG = { country_event = DOD_hungary.30 }
+						else = {
+							if = {
+								limit = { 
+									country_exists = CZE
+								}
+								CZE = { country_event = DOD_hungary.30 }
+								else = {
+									#No one left to object
+									HUN = { country_event = DOD_hungary.31 }					
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+		#ROM block
+		if = {
+			limit = {
+				tag = ROM
+			}
+			if = {
+				limit = {
+					country_exists = YUG
+				}
+				YUG = { country_event = DOD_hungary.30 }
+				else = {
+					if = {
+						limit = { 
+							country_exists = CZE
+						}
+						CZE = { country_event = DOD_hungary.30 }
+						else = {
+							#No one left to object
+							HUN = { country_event = DOD_hungary.31 }					
+						}
+					}
+				}
+			}
+		}
+
+		#YUG block
+		if = {
+			limit = {
+				tag = YUG
+			}
+			if = {
+				limit = {
+					country_exists = CZE
+				}
+				CZE = { country_event = DOD_hungary.30 }
+				else = {					
+					#No one left to object
+					HUN = { country_event = DOD_hungary.31 }					
+				}
+			}
+		}
+
+		#CZE
+		if = {
+			limit = {
+				tag = CZE
+			}
+			HUN = { country_event = { id = DOD_hungary.31 days = 1 } }
+		}
+		
+	}
+
+
+	option = { #refuse
+		name = DOD_hungary.30.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				AND = {
+					has_war = yes
+					NOT = { is_in_faction_with = HUN }
+				}
+				factor = 2 #let's not potentially get another front going
+			}
+		}
+		HUN = { 
+			country_event = { id = DOD_hungary.32 hours = 12 } 
+			set_country_flag = HUN_rearmament_refused
+		}
+		set_country_flag = HUN_refused
+	}
+
+}
+
+#everything is fine, Hungary permitted to rearm
+country_event = {
+	id = DOD_hungary.31
+	title = DOD_hungary.31.t
+	desc = DOD_hungary.31.desc
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = HUN_rearmament_refused
+		}
+	}
+
+	option = { #cool
+		name = DOD_hungary.31.a
+		swap_ideas = {
+			remove_idea = HUN_treaty_of_triannon
+			add_idea = Hun_treaty_of_triannon_2
+		}
+	}
+
+}
+
+#Rearmament denied - appeal to major democratic nations?
+country_event = {
+	id = DOD_hungary.32
+	title = DOD_hungary.32.t
+	desc = DOD_hungary.32.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #do nothing, people get very angry and upset
+		name = DOD_hungary.32.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				threat < 0.1
+				factor = 2
+			}
+		}
+		add_stability = -0.1
+		add_popularity = { ideology = fascism popularity = 0.1 }
+		add_popularity = { ideology = communism popularity = 0.1 }
+	}
+
+
+	option = { #approach France
+		name = DOD_hungary.32.b
+		ai_chance = {
+			factor = 45
+		}
+		trigger = {
+			FRA = {
+				NOT = { has_war_with = HUN }
+				NOT = { has_completed_focus = FRA_little_entente } #would be super awkward
+				has_government = democratic
+			}
+		}
+		FRA = { 
+			country_event = { id = DOD_hungary.33 hours = 12 } 
+		}
+	}
+	option = { #approach Britain
+		name = DOD_hungary.32.c
+		ai_chance = {
+			factor = 45
+			modifier = {
+				ENG = { has_completed_focus = uk_balkan_strategy }
+				factor = 2
+			}
+		}
+		trigger = {
+			ENG = {
+				NOT = { has_war_with = HUN }
+				has_government = democratic
+			}
+		}
+		ENG = { 
+			country_event = { id = DOD_hungary.33 hours = 12 } 
+		}
+	}
+
+}
+
+#Hungary calls for support to allow rearmament
+country_event = {
+	id = DOD_hungary.33
+	title = DOD_hungary.33.t
+	desc = DOD_hungary.33.desc
+	picture = GFX_report_event_generic_politician_speech
+	
+	is_triggered_only = yes
+
+	option = { #allow
+		name = DOD_hungary.33.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				is_in_faction_with = HUN
+				factor = 10
+			}
+		}
+		every_country = {
+			limit = {
+				exists = yes
+				has_country_flag = HUN_refused #goes to the country that originally refused
+			}
+			country_event = { id = DOD_hungary.34 }
+		}
+	}
+
+
+	option = { #deny
+		name = DOD_hungary.33.b
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				threat < 0.2
+				factor = 2 #not yet
+			}
+		}
+		
+		HUN = { country_event = { id = DOD_hungary.35 hours = 12 } }
+	}
+
+}
+
+#major nation supports Hungary
+country_event = {
+	id = DOD_hungary.34
+	title = DOD_hungary.34.t
+	desc = DOD_hungary.34.desc
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { #fold
+		ai_chance = {
+			factor = 90
+		}
+		name = DOD_hungary.34.a
+		HUN = { 
+			country_event = { id = DOD_hungary.31 days = 3 } 
+			clr_country_flag = HUN_rearmament_refused
+		}
+	}
+
+
+	option = { #stand ground
+		name = DOD_hungary.34.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				threat < 0.2
+				factor = 2
+			}
+		}
+		add_threat = 1
+		HUN = { set_country_flag = HUN_rearmament_refused }
+		
+		reverse_add_opinion_modifier = { target = FROM modifier = HUN_stubborn_fools }
+
+		add_relation_modifier = {
+				target = FROM
+				modifier = HUN_stubborn_fools
+			}
+		
+		HUN = { country_event = { id = DOD_hungary.36 hours = 12 } }
+	}
+
+}
+
+#major nation refuses to support Hungary
+country_event = {
+	id = DOD_hungary.35
+	title = DOD_hungary.35.t
+	desc = DOD_hungary.35.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = { #mean!
+		name = DOD_hungary.35.a
+		
+	}
+
+}
+#Little Entente Nations refuse even though a major nation told them to knock it off
+country_event = {
+	id = DOD_hungary.36
+	title = DOD_hungary.36.t
+	desc = DOD_hungary.36.desc
+	picture = GFX_report_event_french_british_officers
+	
+	is_triggered_only = yes
+
+	option = { #mean!
+		name = DOD_hungary.36.a
+		
+	}
+
+}
+#Renounce the treaty of trianon - event chain
+#Hungary challenges Little Entente - Romania or France (if in little entente) asked if it wants to intervene
+country_event = {
+	id = DOD_hungary.40
+	title = DOD_hungary.40.t
+	desc = DOD_hungary.40.desc
+	picture = GFX_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+
+	option = { #Fold
+		name = DOD_hungary.40.b
+		ai_chance = {
+			factor = 50
+		}
+		HUN = { country_event = { id = DOD_hungary.42 } }
+	}
+}
+#Romania/France stands up to Hungary - Back down?
+country_event = {
+	id = DOD_hungary.41
+	title = DOD_hungary.41.t
+	desc = DOD_hungary.41.desc
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	option = { #Fold
+		name = DOD_hungary.41.b
+		ai_chance = {
+			factor = 75
+		}
+		FROM = { country_event = { id = DOD_hungary.44 } }
+	}
+}
+#Romania/France fold
+country_event = {
+	id = DOD_hungary.42
+	title = DOD_hungary.42.t
+	desc = DOD_hungary.42.desc
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	option = { #Excellent!
+		name = DOD_hungary.42.a
+		remove_ideas = HUN_treaty_of_triannon
+		news_event = { id = news.298 days = 1 }
+	}
+	
+}
+#Hungary refuses to back down
+country_event = {
+	id = DOD_hungary.43
+	title = DOD_hungary.43.t
+	desc = DOD_hungary.43.desc
+	picture = GFX_report_event_hungarian_soldiers
+	
+	is_triggered_only = yes
+
+	option = { #war!
+		name = DOD_hungary.43.a
+		ai_chance = {
+			factor = 66
+			modifier = {
+				threat > 0.5
+				factor = 0.5 #don't have time for this
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.5 #bigger fish to fry
+			}
+			modifier = {
+				strength_ratio = { tag = HUN ratio < 1.0 }
+				factor = 0.5
+			}
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HUN
+		}
+		add_stability = -0.15
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			set_rule = { can_create_factions = yes }
+			create_faction = BALKAN_ENTENTE_FACTION
+		}
+		if = {
+			limit = { 
+				is_faction_leader = yes 
+				NOT = { is_in_faction_with = CZE }
+				CZE = { 
+					is_puppet = no 
+					is_in_faction = no
+				}
+			}
+			CZE = { country_event = { id = DOD_hungary.45 } } #invite CZE
+		}
+		if = {
+			limit = { 
+				is_faction_leader = yes 
+				NOT = { is_in_faction_with = YUG }
+				YUG = { 
+					is_puppet = no 
+					is_in_faction = no
+				}
+			}
+			YUG = { country_event = { id = DOD_hungary.45 } } #invite YUG
+		}
+	}
+	option = { #on second thought...
+		name = DOD_hungary.43.b
+		ai_chance = {
+			factor = 34
+		}
+		HUN = { country_event = { id = DOD_hungary.42 } }
+	}
+	
+}
+#Hungary folds
+country_event = {
+	id = DOD_hungary.44
+	title = DOD_hungary.44.t
+	desc = DOD_hungary.44.desc
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = DOD_hungary.44.a
+		add_stability = 0.1
+	}
+	
+}
+
+#Intervention in Hungary - invite surrounding countries
+country_event = {
+	id = DOD_hungary.45
+	title = DOD_hungary.45.t
+	desc = DOD_hungary.45.desc
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+
+	
+
+	option = {#no 
+		name = DOD_hungary.45.a
+		ai_chance = {
+			factor = 30
+		}
+		FROM = { country_event = { id = DOD_hungary.46 } }
+	}
+}
+
+
+#Intervention in Hungary - negative reply
+country_event = {
+	id = DOD_hungary.46
+	title = DOD_hungary.46.t
+	desc = DOD_hungary.46.desc
+	picture = GFX_report_event_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = DOD_hungary.46.a
+		add_opinion_modifier = { target = FROM modifier = HUN_refused_alliance }
+	}
+}
+
+#Hungary demands transylvania - agree?
+country_event = {
+	id = DOD_hungary.50
+	title = DOD_hungary.50.t
+	desc = DOD_hungary.50.desc
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+
+	option = {#yes 
+		name = DOD_hungary.50.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				strength_ratio = { tag = HUN ratio < 0.8 }
+				factor = 2
+			}
+		}
+		remove_state_core = 76
+		HUN = { country_event = { id = DOD_hungary.51 } }
+		add_stability = -0.2
+
+	}
+}
+
+#Romania hands over Transylvania
+country_event = {
+	id = DOD_hungary.51
+	title = DOD_hungary.51.t
+	desc = DOD_hungary.51.desc
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = Balkan_crisis_mediation_requested
+		}
+	}
+
+	option = {# 
+		name = DOD_hungary.51.a
+		hidden_effect = {
+			ROM = {
+				set_country_flag = second_vienna_accepted_all #needed for event bulgaria.4
+			}
+		}
+		HUN = {
+			if = {
+				limit = {
+					FROM = {
+						controls_state = 76
+					}
+				}
+				transfer_state = 76
+			}
+		}
+		add_threat = -1
+		if = {
+			limit = {
+				has_idea = HUN_war_preparation
+			}
+			remove_ideas = HUN_war_preparation
+		}
+		news_event = { id = news.301 days = 1 }
+	}
+}
+
+#Romania refuses to hand over Transylvania
+country_event = {
+	id = DOD_hungary.52
+	title = DOD_hungary.52.t
+	desc = DOD_hungary.52.desc
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {# Let it go
+		name = DOD_hungary.52.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				strength_ratio = { tag = ROM ratio < 1 } #weaker than Romania
+				factor = 2
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		add_stability = -0.2
+		remove_state_core = 76
+		remove_state_core = 83
+		remove_state_core = 84
+		add_threat = -1
+	}
+
+	option = {# Prepare for war!
+		name = DOD_hungary.52.b
+		ai_chance = {
+			factor = 80
+			modifier = {
+				strength_ratio = { tag = ROM ratio > 1.2 }
+				factor = 3
+			}
+		}
+		ROM = { country_event = { id = DOD_hungary.53 hours = 24} }
+		add_ideas = HUN_war_preparation
+		add_threat = 2
+		news_event = { id = news.302 days = 1 }
+	}
+}
+
+#Romania told about Hungarian preparations
+country_event = {
+	id = DOD_hungary.53
+	title = DOD_hungary.53.t
+	desc = DOD_hungary.53.desc
+	picture = GFX_report_event_hungarian_soldiers
+	
+	is_triggered_only = yes
+
+	option = {# Back down
+		name = DOD_hungary.53.a
+		ai_chance = {
+			factor = 35
+			modifier = { 
+				strength_ratio = { tag = HUN ratio < 0.8 }
+				factor = 0.5
+			}
+			modifier = { 
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+			modifier = {
+				is_in_faction = yes
+				factor = 0 #we got friends
+			}
+		}
+		add_stability = -0.15
+		HUN = {
+			country_event = { id = DOD_hungary.51 }
+		}
+	}
+
+	option = {# Prepare for war!
+		name = DOD_hungary.53.b
+		HUN = { country_event = { id = DOD_hungary.54 hours = 24 } }
+		ai_chance = {
+			factor = 35
+			modifier = {
+				has_completed_focus = ROM_balkans_dominance
+				factor = 10 #NO DEALS WITH THE HUNGARIAN SCUM
+			}
+			modifier = { 
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+			modifier = { 
+				is_in_faction = yes
+				factor = 2
+			}
+		}
+		add_ideas = ROM_war_preparation
+		add_threat = 1
+		if = {
+			limit = { 
+				GER = {
+					NOT = {
+						OR = {
+							has_war_with = HUN
+							has_war_with = ROM
+						}
+					}
+				}
+			}
+			GER = { country_event = { id = DOD_hungary.60 } } #Germany given option to intervene
+		}
+		if = {
+			limit = { 
+				ITA = {
+					NOT = {
+						OR = {
+							has_war_with = HUN
+							has_war_with = ROM
+						}
+						is_in_faction_with = GER
+					}
+				}
+			}
+			ITA = { country_event = { id = DOD_hungary.60 } } #Italy given option to intervene, if not in faction with Germany
+		}
+		if = {
+			limit = { 
+				FRA = {
+					has_war = no
+					has_government = democratic
+				}
+			}
+			FRA = { country_event = { id = DOD_hungary.60 } } #France given option to intervene, if they don't have bigger problems
+		}
+		if = {
+			limit = { 
+				ENG = {
+					has_war = no
+					has_government = democratic
+					has_completed_focus = uk_balkan_strategy
+				}
+			}
+			ENG = { country_event = { id = DOD_hungary.60 } } #Britain given option to intervene, if they don't have bigger problems
+		}
+	}
+
+	option = {# Ask for mediation
+		name = DOD_hungary.53.c
+		ai_chance = {
+			factor = 35
+		}
+		HUN = { country_event = { id = DOD_hungary.55 hours = 24 } }
+		
+	}
+}
+
+#Hungary told that Romania is mobilizing
+country_event = {
+	id = DOD_hungary.54
+	title = DOD_hungary.54.t
+	desc = DOD_hungary.54.desc
+	picture = GFX_report_event_romanian_soldiers
+	
+	is_triggered_only = yes
+
+	option = {# Back down
+		name = DOD_hungary.54.a
+		ai_chance = {
+			factor = 35
+			modifier = {
+				strength_ratio = { tag = ROM ratio < 0.5 } #weaker than Romania
+				factor = 2
+			}
+			modifier = { 
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+		}
+		add_stability = -0.1
+		remove_state_core = 76
+		remove_state_core = 83
+		remove_state_core = 84
+		add_threat = -1
+		ROM = {	country_event = { id = DOD_hungary.57 } }
+		remove_ideas = HUN_war_preparation
+		
+	}
+
+	option = {# To war!
+		name = DOD_hungary.54.b
+		ai_chance = {
+			factor = 35
+			modifier = { 
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+			modifier = { 
+				strength_ratio = { tag = ROM ratio > 1.25 } #stronger than Romania
+				factor = 2
+			}
+		}
+		declare_war_on = {
+				target = ROM
+				type = take_state_focus
+				generator = { 76 83 84 } 
+			}
+
+	}
+	
+	option = {# Ask for mediation
+		name = DOD_hungary.54.c
+		ai_chance = {
+			factor = 35
+		}
+		country_event = { id = DOD_hungary.55 }
+	}
+}
+

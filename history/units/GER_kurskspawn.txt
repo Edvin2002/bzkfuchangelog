@@ -1,0 +1,32 @@
+units = {
+	division= {
+		name = "Panzer-Division"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Panzer-Division"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Panzer-Division"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Panzer-Division"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Panzer-Division"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+}

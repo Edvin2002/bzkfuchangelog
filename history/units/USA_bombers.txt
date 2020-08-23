@@ -1,0 +1,11 @@
+#pfu US bomber event
+air_wings = {
+	358 = {
+		#reeeeeeee
+		strat_bomber_equipment_2 =  {
+			owner = "USA" 
+			amount = 600
+		}
+
+ }
+}

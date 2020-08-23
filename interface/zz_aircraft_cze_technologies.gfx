@@ -1,0 +1,42 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_CZE_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/CZE_fighter_avia34.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_CAS1_medium"
+		texturefile = "gfx/interface/technologies/CZE_bomber_aero101.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_fighter1_medium"
+		texturefile = "gfx/interface/technologies/CZE_fighter_avia534.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_fighter2_medium"
+		texturefile = "gfx/interface/technologies/CZE_fighter_avia135.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/CZE_bomber_bloch200.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/CZE_bomber_aero304.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/CZE_bomber_letov50.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CZE_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/CZE_bomber_aero300.dds"
+	}
+}

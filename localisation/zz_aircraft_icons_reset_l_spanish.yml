@@ -1,0 +1,27 @@
+﻿l_spanish:
+ #UK
+ ENG_cv_CAS_equipment_2:0 "AAC Portaaviones II"
+ ENG_cv_CAS_equipment_2_short:0 "AAC Portaaviones II"
+ ENG_jet_tac_bomber_equipment_1:0 "Bombardero táctico a reacción I"
+ ENG_jet_tac_bomber_equipment_1_short:0 "Bombardero táctico reactor I"
+ #Germany
+ GER_cv_CAS_equipment_3:0 "AAC Portaaviones III"
+ GER_cv_CAS_equipment_3_short:0 "AAC Portaaviones III"
+ GER_cv_nav_bomber_equipment_3:0 "Bombardero naval de portaaviones III"
+ GER_cv_nav_bomber_equipment_3_short:0 "Bombardero de portaaviones III"
+ #Italy
+ ITA_cv_CAS_equipment_1:0 "AAC Portaaviones I"
+ ITA_cv_CAS_equipment_1_short:0 "AAC Portaaviones I"
+ ITA_cv_CAS_equipment_3:0 "AAC Portaaviones III"
+ ITA_cv_CAS_equipment_3_short:0 "AAC Portaaviones III"
+ ITA_cv_nav_bomber_equipment_1:0 "Bombardero naval de portaaviones I"
+ ITA_cv_nav_bomber_equipment_1_short:0 "Bombardero de portaaviones I"
+ #USSR
+ SOV_cv_CAS_equipment_2:0 "AAC Portaaviones II"
+ SOV_cv_CAS_equipment_2_short:0 "AAC Portaaviones II"
+ SOV_cv_CAS_equipment_3:0 "AAC Portaaviones III"
+ SOV_cv_CAS_equipment_3_short:0 "AAC Portaaviones III"
+ SOV_cv_fighter_equipment_2:0 "Caza de portaaviones II"
+ SOV_cv_fighter_equipment_2_short:0 "Caza de portaaviones II"
+ SOV_cv_nav_bomber_equipment_2:0 "Bombardero naval de portaaviones II"
+ SOV_cv_nav_bomber_equipment_2_short:0 "Bombardero de portaaviones II"

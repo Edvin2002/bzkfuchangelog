@@ -1,0 +1,26 @@
+spriteTypes = {
+    spriteType = {
+		name = "GFX_idea_bettertrade"
+		texturefile = "gfx/interface/ideas/bettertrade.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_britishcoop"
+		texturefile = "gfx/interface/ideas/britishcoop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_committee"
+		texturefile = "gfx/interface/ideas/committee.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_defin"
+		texturefile = "gfx/interface/ideas/defin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_defmin"
+		texturefile = "gfx/interface/ideas/defmin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tradedep"
+		texturefile = "gfx/interface/ideas/tradedep.dds"
+	}
+	}

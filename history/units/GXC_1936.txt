@@ -1,0 +1,36 @@
+﻿division_template = {
+	name = "Juntuán"				# Represents: two-division infantry corps (generally poorly-equipped militias), and local militia groups
+	division_names_group = GXC_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+}
+
+
+### OOB ###
+units = {
+	
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "GXC"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 100
+	}
+}

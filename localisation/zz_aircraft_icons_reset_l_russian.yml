@@ -1,0 +1,27 @@
+﻿l_russian:
+ #UK
+ ENG_cv_CAS_equipment_2:0 "Палубный штурмовик II"
+ ENG_cv_CAS_equipment_2_short:0 "Палуб. штурмовик II"
+ ENG_jet_tac_bomber_equipment_1:0 "Реактивный тактический бомбардировщик I"
+ ENG_jet_tac_bomber_equipment_1_short:0 "Реакт. такт. бомбардировщик I"
+ #Germany
+ GER_cv_CAS_equipment_3:0 "Палубный штурмовик III"
+ GER_cv_CAS_equipment_3_short:0 "Палуб. штурмовик III"
+ GER_cv_nav_bomber_equipment_3:0 "Палубный бомбардировщик III"
+ GER_cv_nav_bomber_equipment_3_short:0 "Палуб. бомбардировщик III"
+ #Italy
+ ITA_cv_CAS_equipment_1:0 "Палубный штурмовик I"
+ ITA_cv_CAS_equipment_1_short:0 "Палуб. штурмовик I"
+ ITA_cv_CAS_equipment_3:0 "Палубный штурмовик III"
+ ITA_cv_CAS_equipment_3_short:0 "Палуб. штурмовик III"
+ ITA_cv_nav_bomber_equipment_1:0 "Палубный бомбардировщик I"
+ ITA_cv_nav_bomber_equipment_1_short:0 "Палуб. бомбардировщик I"
+ #USSR
+ SOV_cv_CAS_equipment_2:0 "Палубный штурмовик II"
+ SOV_cv_CAS_equipment_2_short:0 "Палуб. штурмовик II"
+ SOV_cv_CAS_equipment_3:0 "Палубный штурмовик III"
+ SOV_cv_CAS_equipment_3_short:0 "Палуб. штурмовик III"
+ SOV_cv_fighter_equipment_2:0 "Палубный истребитель II"
+ SOV_cv_fighter_equipment_2_short:0 "Палуб. истребитель II"
+ SOV_cv_nav_bomber_equipment_2:0 "Палубный бомбардировщик II"
+ SOV_cv_nav_bomber_equipment_2_short:0 "Палуб. бомбардировщик II"

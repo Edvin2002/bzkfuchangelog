@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_Mitsumasa_doctrine"
+		texturefile = "gfx/interface/ideas/mitsumasa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Yamamoto_doctrine"
+		texturefile = "gfx/interface/ideas/yamamoto_doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_magic"
+		texturefile = "gfx/interface/ideas/coastal.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Zaibatsu_Deal"
+		texturefile = "gfx/interface/ideas/idea_jap_zaibatsu_ally.dds"
+	}
+}

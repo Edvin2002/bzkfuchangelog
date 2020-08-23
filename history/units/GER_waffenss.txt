@@ -1,0 +1,32 @@
+units = {
+	division= {
+		name = "1st SS-Panzer Leibstandarte Adolf Hitler"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "2nd SS-Panzer Das Reich"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "3rd SS-Panzer Totenkopf"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "5th SS-Panzer Wiking"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "12th SS-Panzer Hitlerjugend"
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+}

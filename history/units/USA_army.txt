@@ -1,0 +1,99 @@
+units = {
+
+	division= {
+		name = "22th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "24th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "23th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "21th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "31th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "32th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "44th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "51th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "52th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "14th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "16th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "17th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	}

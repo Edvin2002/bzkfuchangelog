@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_surface_raiders"
+		texturefile = "gfx/interface/ideas/surface_raiders.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sea_wolfs"
+		texturefile = "gfx/interface/ideas/sea_wolfs.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_basket"
+		texturefile = "gfx/interface/ideas/basket.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fight_med"
+		texturefile = "gfx/interface/ideas/fight_med.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_escort_effort"
+		texturefile = "gfx/interface/ideas/escort_effort.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_breakout_atl"
+		texturefile = "gfx/interface/ideas/breakout_atl.dds"
+	}
+}

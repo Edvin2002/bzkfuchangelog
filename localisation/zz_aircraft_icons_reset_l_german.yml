@@ -1,0 +1,27 @@
+﻿l_german:
+ #UK
+ ENG_cv_CAS_equipment_2:0 "Träger-LNUst-Flugzeug II"
+ ENG_cv_CAS_equipment_2_short:0 "Träger-LNUst-Flugzeug II"
+ ENG_jet_tac_bomber_equipment_1:0 "Taktischer Düsenbomber I"
+ ENG_jet_tac_bomber_equipment_1_short:0 "Takt. Düsenbomber I"
+ #Germany
+ GER_cv_CAS_equipment_3:0 "Träger-LNUst-Flugzeug III"
+ GER_cv_CAS_equipment_3_short:0 "Träger-LNUst-Flugzeug III"
+ GER_cv_nav_bomber_equipment_3:0 "Träger-Marinebomber III"
+ GER_cv_nav_bomber_equipment_3_short:0 "Trägerbomber III"
+ #Italy
+ ITA_cv_CAS_equipment_1:0 "Träger-LNUst-Flugzeug I"
+ ITA_cv_CAS_equipment_1_short:0 "Träger-LNUst-Flugzeug I"
+ ITA_cv_CAS_equipment_3:0 "Träger-LNUst-Flugzeug III"
+ ITA_cv_CAS_equipment_3_short:0 "Träger-LNUst-Flugzeug III"
+ ITA_cv_nav_bomber_equipment_1:0 "Träger-Marinebomber I"
+ ITA_cv_nav_bomber_equipment_1_short:0 "Trägerbomber I"
+ #USSR
+ SOV_cv_CAS_equipment_2:0 "Träger-LNUst-Flugzeug II"
+ SOV_cv_CAS_equipment_2_short:0 "Träger-LNUst-Flugzeug II"
+ SOV_cv_CAS_equipment_3:0 "Träger-LNUst-Flugzeug III"
+ SOV_cv_CAS_equipment_3_short:0 "Träger-LNUst-Flugzeug III"
+ SOV_cv_fighter_equipment_2:0 "Trägerjäger II"
+ SOV_cv_fighter_equipment_2_short:0 "Trägerjäger II"
+ SOV_cv_nav_bomber_equipment_2:0 "Träger-Marinebomber II"
+ SOV_cv_nav_bomber_equipment_2_short:0 "Trägerbomber II"

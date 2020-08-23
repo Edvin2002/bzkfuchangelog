@@ -1,0 +1,13 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_AUS_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/AUS_fighter_fiat32.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/AUS_bomber_caproni133.dds"
+	}
+
+}

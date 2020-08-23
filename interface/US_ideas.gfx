@@ -1,0 +1,43 @@
+spriteTypes = {	
+
+	#### Event picture
+	
+	spriteType = {
+		name = "GFX_idea_USA_brain"
+		texturefile = "gfx/interface/ideas/generic_research_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_merch"
+		texturefile = "gfx/interface/ideas/idea_can_wartime_prices_and_trade_board.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_repair"
+		texturefile = "gfx/interface/ideas/rep_yards.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_money"
+		texturefile = "gfx/interface/ideas/Money.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_vol"
+		texturefile = "gfx/interface/ideas/volunt.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_mah"
+		texturefile = "gfx/interface/ideas/Mahan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_king"
+		texturefile = "gfx/interface/ideas/King.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_threat"
+		texturefile = "gfx/interface/ideas/threat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_ahead"
+		texturefile = "gfx/interface/ideas/ahead.dds"
+	}
+
+	
+}

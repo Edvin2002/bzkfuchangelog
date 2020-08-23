@@ -1,0 +1,39 @@
+units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "USS New York"			
+		naval_base = 10337 # Clydebank
+		task_force = {
+			name = "USS Texas"
+			location = 10337 # Clydebank
+			ship = { name = "USS New York" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "New York" } } }
+		}
+	}
+	fleet = {
+		name = "USS Texas"			
+		naval_base = 10337 # Clydebank
+		task_force = {
+			name = "USS Texas"
+			location = 10337 # Clydebank
+			ship = { name = "USS Texas" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "New York" } } }
+		}
+	}
+	fleet = {
+		name = "USS Washington"			
+		naval_base = 10337 # Clydebank
+		task_force = {
+			name = "USS Texas"
+			location = 10337 # Clydebank
+			ship = { name = "USS Washington" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "New York" } } }
+		}
+	}
+	fleet = {
+		name = "USS Florida"			
+		naval_base = 10337 # Clydebank
+		task_force = {
+			name = "USS Texas"
+			location = 10337 # Clydebank
+			ship = { name = "USS Washington" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "New York" } } }
+		}
+	}
+}

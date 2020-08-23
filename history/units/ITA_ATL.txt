@@ -1,0 +1,30 @@
+units = {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Veneto Class"			
+		naval_base = 11837 # Clydebank
+		task_force = {
+			name = "Veneto Class"
+			location = 11837 # Clydebank
+			ship = { name = "Veneto Class" definition = battleship equipment = { ship_hull_cruiser_4= { amount = 1 owner = ITA version_name = "Veneto Class" } } }
+		}
+	}
+	fleet = {
+		name = "Cesaro"			
+		naval_base = 11837 # Clydebank
+		task_force = {
+			name = "Veneto Class"
+			location = 11837 # Clydebank
+			ship = { name = "Veneto Class" definition = battleship equipment = { ship_hull_cruiser_4 = { amount = 1 owner = ITA version_name = "Veneto Class" } } }
+		}
+	}
+	fleet = {
+		name = "Il Duce"			
+		naval_base = 11837 # Clydebank
+		task_force = {
+			name = "Veneto Class"
+			location = 11837 # Clydebank
+			ship = { name = "Veneto Class" definition = battleship equipment = { ship_hull_cruiser_4 = { amount = 1 owner = ITA version_name = "Veneto Class" } } }
+		}
+	}
+}

@@ -1,0 +1,27 @@
+﻿l_braz_por:
+ #UK
+ ENG_cv_CAS_equipment_2:0 "CAS Embarcado II"
+ ENG_cv_CAS_equipment_2_short:0 "CAS Embarcado II"
+ ENG_jet_tac_bomber_equipment_1:0 "Bombardeiro tático a Jato I"
+ ENG_jet_tac_bomber_equipment_1_short:0 "Bombardeiro tático I"
+ #Germany
+ GER_cv_CAS_equipment_3:0 "CAS Embarcado III"
+ GER_cv_CAS_equipment_3_short:0 "CAS Embarcado III"
+ GER_cv_nav_bomber_equipment_3:0 "Bombardeiro Naval Embarcado III"
+ GER_cv_nav_bomber_equipment_3_short:0 "Bombardeiro Naval Embarcado III"
+ #Italy
+ ITA_cv_CAS_equipment_1:0 "CAS Embarcado I"
+ ITA_cv_CAS_equipment_1_short:0 "CAS Embarcado I"
+ ITA_cv_CAS_equipment_3:0 "CAS Embarcado III"
+ ITA_cv_CAS_equipment_3_short:0 "CAS Embarcado III"
+ ITA_cv_nav_bomber_equipment_1:0 "Bombardeiro Naval Embarcado I"
+ ITA_cv_nav_bomber_equipment_1_short:0 "Bombardeiro Naval Embarcado I"
+ #USSR
+ SOV_cv_CAS_equipment_2:0 "CAS Embarcado II"
+ SOV_cv_CAS_equipment_2_short:0 "CAS Embarcado II"
+ SOV_cv_CAS_equipment_3:0 "CAS Embarcado III"
+ SOV_cv_CAS_equipment_3_short:0 "CAS Embarcado III"
+ SOV_cv_fighter_equipment_2:0 "Caça Embarcado II"
+ SOV_cv_fighter_equipment_2_short:0 "Caça Embarcado II"
+ SOV_cv_nav_bomber_equipment_2:0 "Bombardeiro Naval Embarcado II"
+ SOV_cv_nav_bomber_equipment_2_short:0 "Bombardeiro Naval Embarcado II"

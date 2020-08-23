@@ -1,0 +1,27 @@
+﻿l_english:
+ #UK
+ ENG_cv_CAS_equipment_2:0 "Carrier CAS II"
+ ENG_cv_CAS_equipment_2_short:0 "Carrier CAS II"
+ ENG_jet_tac_bomber_equipment_1:0 "Jet Tactical Bomber I"
+ ENG_jet_tac_bomber_equipment_1_short:0 "Jet Tac Bomber I"
+ #Germany
+ GER_cv_CAS_equipment_3:0 "Carrier CAS III"
+ GER_cv_CAS_equipment_3_short:0 "Carrier CAS III"
+ GER_cv_nav_bomber_equipment_3:0 "Carrier Naval Bomber III"
+ GER_cv_nav_bomber_equipment_3_short:0 "Carrier Bomber III"
+ #Italy
+ ITA_cv_CAS_equipment_1:0 "Carrier CAS I"
+ ITA_cv_CAS_equipment_1_short:0 "Carrier CAS I"
+ ITA_cv_CAS_equipment_3:0 "Carrier CAS III"
+ ITA_cv_CAS_equipment_3_short:0 "Carrier CAS III"
+ ITA_cv_nav_bomber_equipment_1:0 "Carrier Naval Bomber I"
+ ITA_cv_nav_bomber_equipment_1_short:0 "Carrier Bomber I"
+ #USSR
+ SOV_cv_CAS_equipment_2:0 "Carrier CAS II"
+ SOV_cv_CAS_equipment_2_short:0 "Carrier CAS II"
+ SOV_cv_CAS_equipment_3:0 "Carrier CAS III"
+ SOV_cv_CAS_equipment_3_short:0 "Carrier CAS III"
+ SOV_cv_fighter_equipment_2:0 "Carrier Fighter II"
+ SOV_cv_fighter_equipment_2_short:0 "Carrier Fighter II"
+ SOV_cv_nav_bomber_equipment_2:0 "Carrier Naval Bomber II"
+ SOV_cv_nav_bomber_equipment_2_short:0 "Carrier Bomber II"

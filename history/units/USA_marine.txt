@@ -1,0 +1,144 @@
+units = {
+
+	division= {
+		name = "26th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "24th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "25th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "22th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "21th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "31th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "32th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "33th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "34th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "41th 'Yankee' Division"
+		location = 6732
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	
+
+	}
+	division= {
+		name = "43. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "42. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "41. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "34. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "35. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "21. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "14. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "15. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "4. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "1. Marine Division"
+		location = 6732
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+	}
+	
+	}

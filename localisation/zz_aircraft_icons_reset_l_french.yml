@@ -1,0 +1,27 @@
+﻿l_french:
+ #UK
+ ENG_cv_CAS_equipment_2:0 "Avion SAR embarqué II"
+ ENG_cv_CAS_equipment_2_short:0 "SAR embarqué II"
+ ENG_jet_tac_bomber_equipment_1:0 "Bombardier tactique à réaction I"
+ ENG_jet_tac_bomber_equipment_1_short:0 "Bombardier tac. à réaction I"
+ #Germany
+ GER_cv_CAS_equipment_3:0 "Avion SAR embarqué III"
+ GER_cv_CAS_equipment_3_short:0 "SAR embarqué III"
+ GER_cv_nav_bomber_equipment_3:0 "Bombardier naval embarqué III"
+ GER_cv_nav_bomber_equipment_3_short:0 "Bombardier embarqué III"
+ #Italy
+ ITA_cv_CAS_equipment_1:0 "Avion SAR embarqué I"
+ ITA_cv_CAS_equipment_1_short:0 "SAR embarqué I"
+ ITA_cv_CAS_equipment_3:0 "Avion SAR embarqué III"
+ ITA_cv_CAS_equipment_3_short:0 "SAR embarqué III"
+ ITA_cv_nav_bomber_equipment_1:0 "Bombardier naval embarqué I"
+ ITA_cv_nav_bomber_equipment_1_short:0 "Bombardier embarqué I"
+ #USSR
+ SOV_cv_CAS_equipment_2:0 "Avion SAR embarqué II"
+ SOV_cv_CAS_equipment_2_short:0 "SAR embarqué II"
+ SOV_cv_CAS_equipment_3:0 "Avion SAR embarqué III"
+ SOV_cv_CAS_equipment_3_short:0 "SAR embarqué III"
+ SOV_cv_fighter_equipment_2:0 "Chasseur embarqué II"
+ SOV_cv_fighter_equipment_2_short:0 "Chasseur embarqué II"
+ SOV_cv_nav_bomber_equipment_2:0 "Bombardier naval embarqué II"
+ SOV_cv_nav_bomber_equipment_2_short:0 "Bombardier embarqué II"
