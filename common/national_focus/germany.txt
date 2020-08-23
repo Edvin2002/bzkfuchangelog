@@ -121,7 +121,7 @@ focus_tree = {
 					show_ideas_tooltip = ritter_von_greim
 				}
 			completion_reward = {
-					air_experience = 50
+					air_experience = 250
 					add_tech_bonus = {
 							name = Fallschirmjäger
 							bonus = 1.0
@@ -131,12 +131,12 @@ focus_tree = {
 					add_tech_bonus = {
 							name = air_sup_bonus
 							bonus = 1.0
-							uses = 2
+							uses = 4
 							category = air_doctrine
 						}
 					add_tech_bonus = {
 							name = air_sup_bonus
-							bonus = 0.5
+							bonus = 0.75
 							uses = 1
 							technology = fighter2
 						}
@@ -828,7 +828,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_extra_tech_slot
 		}
-		x = 1
+		x = 2
 		y = 5
 			ai_will_do = {
 					factor = 1
@@ -854,19 +854,35 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_rocketry_focus
-		icon = GFX_focus_rocketry
-		cost = 10
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 1
 		prerequisite = {
-			focus = GER_extra_tech_slot
+			focus = GER_fall_gelb
 		}
-		x = 3
-		y = 5
+		x = 15
+		y = 7
 			ai_will_do = {
 					factor = 1
 				}
-			available_if_capitulated = yes
+			available = {
+					date >1939.12.20
+					date < 1940.6.20
+				}
 			completion_reward = {
-					add_ideas = GER_rocketry_idea
+					custom_effect_tooltip = Afrika_korps
+					hidden_effect = {
+							load_oob = GER_afrikakorps
+							}
+					add_timed_idea = {
+							idea = GER_rocketry_idea
+							days = 90
+						}
+						ITA = {
+						add_timed_idea = {
+							idea = GER_rocketry_idea
+							days = 90
+						}
+						}
 				}
 
 	}

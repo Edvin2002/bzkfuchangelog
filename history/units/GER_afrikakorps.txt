@@ -1,0 +1,14 @@
+units = {
+	division= {
+		name = "15th Panzer Division"
+		location = 1062
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "21st Panzer Division"
+		location = 1062
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.5
+	}
+	}

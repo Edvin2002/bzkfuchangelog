@@ -633,7 +633,7 @@ focus_tree = {
 				add_to_faction = ROOT
 			}
 			SPR = { country_event = {   id = pfu.355 }   }
-			ENG = {
+			BRA = {
 			transfer_state = 290
 			transfer_state = 178
 			transfer_state = 297

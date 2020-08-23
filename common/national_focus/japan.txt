@@ -796,6 +796,30 @@ focus_tree = {
 									target = USA
 									type = annex_everything
 								}
+								declare_war_on = {
+									target = ENG
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = FRA
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = RAJ
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = AST
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = CAN
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = SAF
+									type = annex_everything
+								}
 						}
 					add_timed_idea = {
 							idea = for_the_emperor_idea
@@ -968,6 +992,30 @@ focus_tree = {
 					JAP = {
 							declare_war_on = {
 									target = USA
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = ENG
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = FRA
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = RAJ
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = AST
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = CAN
+									type = annex_everything
+								}
+								declare_war_on = {
+									target = SAF
 									type = annex_everything
 								}
 						}

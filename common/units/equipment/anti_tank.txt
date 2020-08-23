@@ -24,17 +24,16 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 4
-		hard_attack = 20
-		ap_attack = 90
+		hard_attack = 45
+		ap_attack = 105
 		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 3
 				
-		build_cost_ic = 3
+		build_cost_ic = 1.75
 		resources = {
-			tungsten = 1
-			steel = 1
+			steel = 2
 		}
 	}
 
@@ -54,13 +53,12 @@ equipments = {
 		priority = 90
 		visual_level = 1
 		
-		hard_attack = 27
-		ap_attack = 105
+		hard_attack = 50
+		ap_attack = 115
 		
-		build_cost_ic = 4
+		build_cost_ic = 1.85
 		resources = {
-			tungsten = 1
-			steel = 1
+			steel = 2
 		}
 	}
 	
@@ -72,13 +70,12 @@ equipments = {
 		priority = 90
 		visual_level = 2
 		
-		hard_attack = 35
-		ap_attack = 125
+		hard_attack = 55
+		ap_attack = 127
 		
-		build_cost_ic = 5
+		build_cost_ic = 1.95
 		resources = {
-			tungsten = 1
-			steel = 1
+			steel = 2
 		}
 	}
 }

@@ -116,8 +116,8 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
 NDefines.NMilitary.COMBAT_MINIMUM_TIME = 2
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.06
-NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.035
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.045
+NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.020
 NDefines.NMilitary.TACTIC_SWAP_FREQUENCEY = 8
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.3
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.4
@@ -171,6 +171,7 @@ NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.5 -- 0.015	 % how many max disru
 NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 12
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0
 
+NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00
 NDefines.NNavy.CONVOY_LOSS_HISTORY_TIMEOUT_MONTHS = 0.5
 NDefines.NNavy.NAVAL_COMBAT_RESULT_TIMEOUT_YEARS = 0.2
 NDefines.NNavy.CONVOY_DEFENSE_MAX_CONVOY_TO_SHIP_RATIO	= 20.0
@@ -212,9 +213,9 @@ NDefines.NNavy.SUBMARINE_REVEALED_TIMEOUT = 24						-- Amount of in-game-hours t
 	NDefines.NNavy.COMBAT_RETREAT_DECISION_CHANCE = 0.05
 
 	NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
-		1.5,	-- big guns
-		6.0,	-- torpedos
-		3.0	-- small guns	
+		4.0,	-- big guns
+		18.0,	-- torpedos
+		6.0	-- small guns	
 		}
 		
 		NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types

@@ -576,15 +576,11 @@ ideas = {
 				always = yes
 			}
 
-			research_bonus = {
-				rocketry = 0.40
-				jet_technology = 0.10
-			}
-
-			picture = generic_research_bonus
+			picture = generic_acquire_tanks
 
 			modifier = {
-				production_speed_rocket_site_factor = 0.15
+				supply_consumption_factor = -0.2
+				army_attack_factor = 0.05
 			}
 
 		}

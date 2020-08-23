@@ -6,10 +6,7 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			fighter_equipment = {
-				air_agility = 0.15 maximum_speed = 0.15
-			}
-			cv_fighter_equipment = {
-				air_agility = 0.15 maximum_speed = 0.1
+				air_agility = 0.20 maximum_speed = 0.20 build_cost_ic = -0.10
 			}
 		}
 	}
@@ -57,10 +54,7 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			CAS_equipment = {
-				air_ground_attack = 0.1 reliability = 0.1
-			}
-			cv_CAS_equipment = {
-				air_ground_attack = 0.1 reliability = 0.1
+				air_ground_attack = 0.10 build_cost_ic = -0.10
 			}
 		}
 	}

@@ -36,35 +36,28 @@ units = {
 		name = "1.Royal Armored Division"
 		location = 4076  # Alexandria
 		division_template = "Royal Armor"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division= {
 		name = "2.Royal Armored Division"
 		location = 4076  # Alexandria
 		division_template = "Royal Armor"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division= {
 		name = "3.Royal Armored Division"
 		location = 4076  # Alexandria
 		division_template = "Royal Armor"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division= {
 		name = "4.Royal Armored Division"
 		location = 4076  # Alexandria
 		division_template = "Royal Armor"
-		start_experience_factor = 1.0
-		start_equipment_factor = 1
-	}
-	division= {
-		name = "5.Royal Armored Division"
-		location = 4076  # Alexandria
-		division_template = "Royal Armor"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 }
