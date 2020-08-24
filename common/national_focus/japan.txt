@@ -1975,67 +1975,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = divine_wind_focus
-		icon = GFX_goal_generic_divine_wind
-		cost = 4.30
-		prerequisite = {
-			focus = warrior_traditions_focus
-		}
-		x = 29
-		y = 3
-			ai_will_do = {
-					factor = 1
-				}
-			available = {
-					JAP = {
-							OR = {
-									has_war_with = USA
-									has_war_with = SOV
-									has_war_with = ENG
-									has_war_with = GER
-									has_war_with = FRA
-									has_war_with = ITA
-								}
-						}
-						num_of_naval_factories > 50
-				}
-			#JAP = { surrender_progress > 0.01 }
-			completion_reward = {
-					hidden_effect = {
-							set_rule = {
-									can_use_kamikaze_pilots = yes
-								}
-						}
-					custom_effect_tooltip = kamikaze_focus_tooltip
-				}
-
-	}
-	focus = {
-		id = imperial_glory_focus
-		icon = GFX_goal_shogunfocus
-		cost = 10
-		prerequisite = {
-			focus = divine_wind_focus
-		}
-		prerequisite = {
-			focus = secret_weapon_focus
-		}
-		x = 28
-		y = 5
-			ai_will_do = {
-					factor = 1
-				}
-			available = {
-					has_tech = rocket_engines
-				}
-			completion_reward = {
-					set_technology = {
-							suicide_craft = 1
-						}
-				}
-
-	}
-	focus = {
 		id = jap_improved_sprit_focus
 		icon = GFX_SOV_comecon
 		cost = 10
