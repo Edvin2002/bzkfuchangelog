@@ -1775,8 +1775,8 @@ technologies = {
 		
 		xor = { mobile_warfare superior_firepower mass_assault } 
 	
-		max_dig_in = 10
-		dig_in_speed_factor = 0.25 #25% bonus
+		max_dig_in = 5
+		dig_in_speed_factor = 0.10 #25% bonus
 		
 		
 		path = {
@@ -1917,7 +1917,6 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		enable_tactic = tactic_planned_attack
 		
 		path = {
 			leads_to_tech = grand_mechanized_offensive 
@@ -1973,9 +1972,18 @@ technologies = {
 		xor = {
 			infantry_offensive
 		}
+		modifier = {
+				special_forces_cap = 0.5
+			 
+			}
 	
-		category_light_infantry = {
-			max_organisation = 7
+		category_special_forces = {
+			max_organisation = 5
+			maximum_speed = 0.2
+			}
+		category_artillery = {
+			maximum_speed = 0.2
+			
 		}
 		
 		enable_tactic = tactic_blitz
@@ -2031,8 +2039,11 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		 
-category_light_infantry = {
-			default_morale = 0.1
+category_special_forces = {
+			default_morale = 0.20
+			soft_attack = 0.15
+			hard_attack = 0.15
+			
 		}
 			
 		enable_tactic = tactic_overwhelming_fire
@@ -2085,14 +2096,16 @@ category_light_infantry = {
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
-		category_all_infantry = {
-			max_organisation = 7
+		category_special_forces = {
+		 soft_attack = 0.15
+		 hard_attack = 0.15
+		 
 		}
 		
 		category_artillery = 
 		{
 		 max_organisation = 10
-			 soft_attack = 0.07
+		soft_attack = 0.05
 		}
 
 		path = {
@@ -2142,10 +2155,12 @@ category_light_infantry = {
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
-		 org_loss_when_moving = -0.2
-		category_army = {
-			breakthrough = 0.05
-	        
+		out_of_supply_factor = -0.2
+		 max_dig_in = 5
+		category_special_forces = {
+		 max_organisation = 2
+		 default_morale = 0.05
+		 
 		}
 		
 		enable_tactic = tactic_breakthrough
@@ -2199,7 +2214,11 @@ category_light_infantry = {
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
-		max_planning = 0.20
+		out_of_supply_factor = -0.30
+		category_special_forces = {
+		 max_organisation = 5
+		 
+		}
 		
 		
 		path = {
@@ -2250,11 +2269,13 @@ category_light_infantry = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		land_reinforce_rate = 0.20
-		category_all_infantry = {
-		 max_organisation = 5
+		category_special_forces = {
+		 max_organisation = 10
 		 default_morale = 0.1
+		 breakthrough = 0.9
 		 
 		}
+		enable_tactic = tactic_planned_attack
 		
 
 		doctrine = yes	
@@ -2302,10 +2323,28 @@ category_light_infantry = {
 		xor = {
 			grand_mechanized_offensive
 		}
-		category_light_infantry = {
-			max_organisation = 5
-			breakthrough = 0.1
+		category_army = {
+			defense = -0.5
 		}
+		rocket_artillery_brigade = {
+            soft_attack = 0.10
+			breakthrough = 0.50
+			max_organisation = 20
+			default_morale = 0.02
+			
+        } 
+		mot_rocket_artillery_brigade = { 
+			soft_attack = 0.10
+			breakthrough = 0.50
+			max_organisation = 20
+			default_morale = 0.02
+}
+		motorized_rocket_brigade = { 
+			soft_attack = 0.05
+			breakthrough = 0.50
+			max_organisation = 20
+			default_morale = 0.02
+}
 		
 		enable_tactic = tactic_infantry_charge
 		
@@ -2356,11 +2395,15 @@ category_light_infantry = {
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
-		category_tanks = {
-			max_organisation = 2
+				motorized = {
+			default_morale = 0.20
+			max_organisation = 20
+			
 		}
-		category_all_armor = {
-			default_morale = 0.1
+		motorized_rocket_brigade = {
+			default_morale = 0.10
+			max_organisation = 10
+			
 		}
 		
 		enable_tactic = tactic_blitz
@@ -2415,7 +2458,9 @@ category_light_infantry = {
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
-		supply_consumption_factor = -0.20
+		army_speed_factor = 0.20
+		air_cas_present_factor = 0.20
+		
 		
 		path = {
 			leads_to_tech = night_assault_tactics 
@@ -2465,7 +2510,7 @@ category_light_infantry = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		#reduce land night combat penalty
-		land_night_attack = 0.25 # negates half of base penalty
+		land_night_attack = 0.10 # negates half of base penalty
 	
 	
 		path = {
@@ -2518,11 +2563,10 @@ category_light_infantry = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		category_all_infantry = {
-			max_organisation = 10
+			max_organisation = 20
+			default_morale = 0.20
 		}
-		category_tanks = {
-			max_organisation = 1
-		}		
+	
 		path = {
 			leads_to_tech = infiltration_in_depth 
 			research_cost_coeff = 1
@@ -2573,8 +2617,25 @@ category_light_infantry = {
 		land_reinforce_rate = 0.02
 		
 		recon = { 
-			recon = 1 
+			recon = 2
 		} 
+		rocket_artillery_brigade = {
+		soft_attack = 0.05
+		breakthrough = 0.20
+		combat_width = -0.5
+		}
+		mot_rocket_artillery_brigade = {
+		soft_attack = 0.05
+		breakthrough = 0.20
+		combat_width = -0.5
+		}
+		motorized_rocket_brigade  = {
+		soft_attack = 0.05
+		breakthrough = 0.20
+		combat_width = -0.5
+		}
+	
+	
 
 		doctrine = yes	
 		research_cost = 2.5
@@ -3375,7 +3436,6 @@ category_light_infantry = {
 		 
 			default_morale = 0.2
 		}
-		
 	 
 		
 		enable_tactic = tactic_guerrilla_tactics
