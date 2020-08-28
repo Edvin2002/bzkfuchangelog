@@ -2043,6 +2043,7 @@ category_special_forces = {
 			default_morale = 0.20
 			soft_attack = 0.15
 			hard_attack = 0.15
+			breakthrough = 1.0
 			
 		}
 			
@@ -2099,6 +2100,7 @@ category_special_forces = {
 		category_special_forces = {
 		 soft_attack = 0.15
 		 hard_attack = 0.15
+		 breakthrough = 1.0
 		 
 		}
 		
@@ -2272,7 +2274,7 @@ category_special_forces = {
 		category_special_forces = {
 		 max_organisation = 10
 		 default_morale = 0.1
-		 breakthrough = 0.9
+		 breakthrough = 1.0
 		 
 		}
 		enable_tactic = tactic_planned_attack
@@ -2325,12 +2327,14 @@ category_special_forces = {
 		}
 		category_army = {
 			defense = -0.5
+			hard_attack = -0.5
 		}
 		rocket_artillery_brigade = {
             soft_attack = 0.10
 			breakthrough = 0.50
 			max_organisation = 20
 			default_morale = 0.02
+			breakthrough = 1.0
 			
         } 
 		mot_rocket_artillery_brigade = { 
@@ -2338,12 +2342,14 @@ category_special_forces = {
 			breakthrough = 0.50
 			max_organisation = 20
 			default_morale = 0.02
+			breakthrough = 1.0
 }
 		motorized_rocket_brigade = { 
 			soft_attack = 0.05
 			breakthrough = 0.50
 			max_organisation = 20
 			default_morale = 0.02
+			breakthrough = 1.0
 }
 		
 		enable_tactic = tactic_infantry_charge
@@ -2623,16 +2629,19 @@ category_special_forces = {
 		soft_attack = 0.05
 		breakthrough = 0.20
 		combat_width = -0.5
+		breakthrough = 1.0
 		}
 		mot_rocket_artillery_brigade = {
 		soft_attack = 0.05
 		breakthrough = 0.20
 		combat_width = -0.5
+		breakthrough = 1.0
 		}
 		motorized_rocket_brigade  = {
 		soft_attack = 0.05
 		breakthrough = 0.20
 		combat_width = -0.5
+		breakthrough = 1.0
 		}
 	
 	

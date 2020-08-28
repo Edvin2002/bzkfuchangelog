@@ -24,7 +24,7 @@ equipments = {
 
 		#Offensive Abilities
 		soft_attack = 4
-		hard_attack = 25
+		hard_attack = 15
 		ap_attack = 105
 		air_attack = 0
 
@@ -53,7 +53,7 @@ equipments = {
 		priority = 90
 		visual_level = 1
 		
-		hard_attack = 30
+		hard_attack = 20
 		ap_attack = 115
 		
 		build_cost_ic = 1.85
@@ -70,7 +70,7 @@ equipments = {
 		priority = 90
 		visual_level = 2
 		
-		hard_attack = 35
+		hard_attack = 25
 		ap_attack = 127
 		
 		build_cost_ic = 1.95
