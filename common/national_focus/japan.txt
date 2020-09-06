@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	
+
 	focus = {
 		id = test_the_ussr_focus
 		icon = GFX_focus_jap_colony
@@ -65,7 +65,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-				
+
 				}
 
 	}
@@ -249,7 +249,7 @@ focus_tree = {
 									remove_naval_treaty_effect = yes
 								}
 							clr_global_flag = MTG_naval_treaty_signatories
-			
+
 						}
 					if = {
 							limit = {
@@ -278,7 +278,7 @@ focus_tree = {
 													has_idea = MTG_naval_treaty_adherent
 												}
 										}
-									activate_mission = MTG_escalator_clause_invocation_mission
+					#				activate_mission = MTG_escalator_clause_invocation_mission
 									custom_effect_tooltip = MTG_escalator_clause_tt
 								}
 						}
@@ -428,8 +428,8 @@ focus_tree = {
 					air_experience = 50
 					custom_effect_tooltip = JAP_the_zero_tt
 			         hidden_effect = { set_technology = { cv_fighter2 = 1 } }
-					 
-					 
+
+
 					add_tech_bonus = {
 							name = fighter_bonus
 							ahead_reduction = 2
@@ -449,7 +449,7 @@ focus_tree = {
 							uses = 1
 							technology = naval_bomber2
 						}
-					
+
 				}
 
 	}
@@ -796,30 +796,6 @@ focus_tree = {
 									target = USA
 									type = annex_everything
 								}
-								declare_war_on = {
-									target = ENG
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = FRA
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = RAJ
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = AST
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = CAN
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = SAF
-									type = annex_everything
-								}
 						}
 					add_timed_idea = {
 							idea = for_the_emperor_idea
@@ -994,30 +970,6 @@ focus_tree = {
 									target = USA
 									type = annex_everything
 								}
-								declare_war_on = {
-									target = ENG
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = FRA
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = RAJ
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = AST
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = CAN
-									type = annex_everything
-								}
-								declare_war_on = {
-									target = SAF
-									type = annex_everything
-								}
 						}
 					add_timed_idea = {
 							idea = for_the_emperor_idea2
@@ -1086,7 +1038,7 @@ focus_tree = {
 		y = 2
 			completion_reward = {
 					set_technology = {
-							tac_bomber2 = 1
+							tactical_bomber1 = 1
 						}
 					add_equipment_to_stockpile = {
 							type = tac_bomber_equipment_2
@@ -1975,6 +1927,67 @@ focus_tree = {
 
 	}
 	focus = {
+		id = divine_wind_focus
+		icon = GFX_goal_generic_divine_wind
+		cost = 4.30
+		prerequisite = {
+			focus = warrior_traditions_focus
+		}
+		x = 29
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					JAP = {
+							OR = {
+									has_war_with = USA
+									has_war_with = SOV
+									has_war_with = ENG
+									has_war_with = GER
+									has_war_with = FRA
+									has_war_with = ITA
+								}
+						}
+						num_of_naval_factories > 50
+				}
+			#JAP = { surrender_progress > 0.01 }
+			completion_reward = {
+					hidden_effect = {
+							set_rule = {
+									can_use_kamikaze_pilots = yes
+								}
+						}
+					custom_effect_tooltip = kamikaze_focus_tooltip
+				}
+
+	}
+	focus = {
+		id = imperial_glory_focus
+		icon = GFX_goal_shogunfocus
+		cost = 10
+		prerequisite = {
+			focus = divine_wind_focus
+		}
+		prerequisite = {
+			focus = secret_weapon_focus
+		}
+		x = 28
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			available = {
+					has_tech = rocket_engines
+				}
+			completion_reward = {
+					set_technology = {
+							suicide_craft = 1
+						}
+				}
+
+	}
+	focus = {
 		id = jap_improved_sprit_focus
 		icon = GFX_SOV_comecon
 		cost = 10
@@ -2006,13 +2019,13 @@ focus_tree = {
 									type = annex_everything
 								}
 						}
-				
-				
-				
-				
-				
+
+
+
+
+
 				}
-				
+
 }
 
 	focus = {

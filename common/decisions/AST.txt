@@ -19,4 +19,31 @@ political_actions = {
 			}
 		}
 	}
+
+
+AST_sell_pig_iron = {
+
+  cost = 50
+
+  allowed = {
+    tag = AST
+  }
+
+  icon = generic_political_discourse
+
+  fire_only_once = yes
+
+available = {
+  has_country_leader = { ruling_only = yes name = "Joseph Lyons" }
+}
+
+complete_effect = {
+  set_country_flag = pig_iron_sold
+  add_timed_idea = {
+    idea = pig_iron_sale days = 120
+  }
+}
+
+}
+
 }

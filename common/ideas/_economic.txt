@@ -1,6 +1,7 @@
 ideas = {
 
 	economy = {
+		use_list_view = yes
 		law = yes
 		undisturbed_isolation = {
 
@@ -60,7 +61,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
-		
+
 		civilian_economy = {
 			cost = 150
 			removal_cost = -1
@@ -246,7 +247,7 @@ ideas = {
 						NOT = {original_tag = GER}
 					}
 					NOT = { has_idea = GER_short_war }
-					 
+
 				}
 			}
 
@@ -295,10 +296,10 @@ ideas = {
                 visible = {
 					original_tag = RAJ
 					has_completed_focus = Defence_in_Depth
-				
+
 				}
 			available = {
-				 
+
 			}
 
 			ai_will_do = {
@@ -332,24 +333,25 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = 0.12
-				 
+
 				production_speed_dockyard_factor = 0.3
 				production_speed_arms_factory_factor = 0.3
-				 
+
 			}
 
 			cancel_if_invalid = no
 		}
 	}
-	
+
 
 	trade_laws = {
 		law = yes
+		use_list_view = yes
 
 		free_trade = {
 		 visible = {
   NOT = {original_tag = SOV}
-  
+
   }
 
 
@@ -370,7 +372,7 @@ ideas = {
 		export_focus = {
  visible = {
   NOT = {original_tag = SOV}
-  
+
   }
 
 			cost = 150
@@ -399,7 +401,7 @@ ideas = {
 
   visible = {
   NOT = {original_tag = SOV}
-  
+
   }
 			available = {
 				NOT = { tag = POR }

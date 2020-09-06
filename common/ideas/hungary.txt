@@ -721,21 +721,14 @@ ideas = {
 				original_tag = HUN
 			}
 			
-			cost = 75
+			cost = 150
 			#removal_cost = 10
 			
 			research_bonus = {
-				mot_rockets = 1.0
+				infantry_weapons = 0.10
 			}
-        equipment_bonus = {
-				motorized_rocket_equipment = {
-					reliability = 0.1
-					soft_attack = 0.05
-					build_cost_ic = -0.05
-				}
-				}
 			
-			traits = { motorized_equipment_manufacturer }
+			traits = { infantry_equipment_manufacturer }
 		}
 	}
 }

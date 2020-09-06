@@ -116,9 +116,9 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
 NDefines.NMilitary.COMBAT_MINIMUM_TIME = 2
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.045
-NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.020
-NDefines.NMilitary.TACTIC_SWAP_FREQUENCEY = 24
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.06
+NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.035
+NDefines.NMilitary.TACTIC_SWAP_FREQUENCEY = 8
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.3
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.4
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.40
@@ -138,7 +138,7 @@ NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.01
 NDefines.NMilitary.PLANNING_DECAY = 0.01         
 NDefines.NMilitary.PLANNING_GAIN = 0.04					
 NDefines.NMilitary.PLANNING_MAX = 0.25                        	
-NDefines.NMilitary.AMPHIBIOUS_LANDING_PENALTY = -0.55       -- 	;	amphibious landing penalty
+NDefines.NMilitary.AMPHIBIOUS_LANDING_PENALTY = -0.7       -- 	;	amphibious landing penalty
 NDefines.NMilitary.STRATEGIC_SPEED_BASE = 6.0
 NDefines.NMilitary.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.018
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.05			-- Balancing value to determine the chance of ground AA hitting an attacking airplane, affecting both the effective average damage done by AA to airplanes, and the reduction of damage done by airplanes due to AA support
@@ -168,10 +168,9 @@ NDefines.NAir.NAVAL_KAMIKAZE_DAMAGE_MULT = 10.0  -- vanilla is like 20
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 0.0
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER =	0.1	-- base 0.192 How much efficiency to regain per day. Gain applied hourly.
 NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.5 -- 0.015	 % how many max disrupted only planes are allowed to die in a single combat NDefines.NAir.NAVAL_STRIKE_DETECTION_BALANCE_FACTOR = 1.0		-- Value used to scale the surface_visibility stats to balance the gameplay, so 100% detection chance still won't spam the strikes.
-NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 8
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 12
 NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500.0
 
-NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00
 NDefines.NNavy.CONVOY_LOSS_HISTORY_TIMEOUT_MONTHS = 0.5
 NDefines.NNavy.NAVAL_COMBAT_RESULT_TIMEOUT_YEARS = 0.2
 NDefines.NNavy.CONVOY_DEFENSE_MAX_CONVOY_TO_SHIP_RATIO	= 20.0
@@ -200,8 +199,8 @@ NDefines.NNavy.SUBMARINE_REVEALED_TIMEOUT = 24						-- Amount of in-game-hours t
 	NDefines.NNavy.AGGRESSION_HEAVY_GUN_EFFICIENCY_ON_HEAVY_SHIPS = 2.0 -- ratio for scoring for different gun types against heavy ships
 	NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_HEAVY_SHIPS = 0.1   -- ratio for scoring for different gun types against heavy ships
 	NDefines.NNavy.COMBAT_DAMAGE_TO_STR_FACTOR = 0.7								-- casting damage value to ship strength multiplier. Use it ot balance the game difficulty.
-	NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.2 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
-	NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO					= 0.50  -- maximum penalty to get from larger fleets
+	NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.7 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
+	NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO					= 0.95  -- maximum penalty to get from larger fleets
 	NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS 					= 3.0	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
 	NDefines.NNavy.CONVOY_DEFENSE_MAX_CONVOY_TO_SHIP_RATIO							= 20.0		-- each ship in convoy defense mission can at most cover this many convoys without losing efficiency
 	NDefines.NNavy.CONVOY_DEFENSE_MAX_REGION_TO_TASKFORCE_RATIO					= 1.3		-- each taskforce in convoy defense mission can at most cover this many regions without losing efficiency   
@@ -213,9 +212,9 @@ NDefines.NNavy.SUBMARINE_REVEALED_TIMEOUT = 24						-- Amount of in-game-hours t
 	NDefines.NNavy.COMBAT_RETREAT_DECISION_CHANCE = 0.05
 
 	NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
-		4.0,	-- big guns
-		18.0,	-- torpedos
-		6.0	-- small guns	
+		1.5,	-- big guns
+		6.0,	-- torpedos
+		3.0	-- small guns	
 		}
 		
 		NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types

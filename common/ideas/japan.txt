@@ -289,10 +289,17 @@ picture = mitsumasa
 			picture = generic_morale_bonus
 
 			modifier = {
-				navy_carrier_air_targetting_factor = 0.33
-				army_attack_factor = 0.33
+				amphibious_invasion = 0.8
+				invasion_preparation = -0.8
 				supply_consumption_factor = -0.2
-				terrain_penalty_reduction = 0.50
+				army_attack_factor = 0.2
+				army_org_Factor = 0.15
+				army_morale_factor = 0.15
+				attrition = -0.20
+				naval_strike = 1.00 
+			
+				terrain_penalty_reduction = 0.20
+				fuel_gain_factor_from_states = 1
 			}
 		}
 
@@ -310,10 +317,17 @@ picture = mitsumasa
 			picture = generic_morale_bonus
 
 			modifier = {
-				navy_carrier_air_targetting_factor = 0.33
-				army_attack_factor = 0.33
+					navy_carrier_air_targetting_factor = 0.25
+				army_attack_factor = 0.2
+				army_morale_factor = 0.15
+				no_supply_grace = 48
+				amphibious_invasion = 0.4
+				invasion_preparation = -0.4
 				supply_consumption_factor = -0.2
-				terrain_penalty_reduction = 0.50
+				refit_ic_cost = -0.3
+				refit_speed = 0.5
+				repair_speed_factor = 1
+				fuel_gain_factor_from_states = 2
 			}
 		}
 		Zaibatsu_Idea = {
@@ -329,7 +343,7 @@ picture = mitsumasa
 			picture = generic_production_bonus
 
 			modifier = {
-			production_speed_industrial_complex_factor = 0.60
+			production_speed_industrial_complex_factor = 0.4
 			}
 		}
 		

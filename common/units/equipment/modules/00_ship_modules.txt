@@ -150,7 +150,7 @@ equipment_modules = {
 		
 		add_stats = {
 			
-			hg_attack = 10
+			hg_attack = 12
 			build_cost_ic = 1275
 		}
 		
@@ -173,7 +173,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 13
+			hg_attack = 16
 			build_cost_ic = 1350
 		}
 		multiply_stats = {
@@ -203,7 +203,7 @@ equipment_modules = {
 		add_equipment_type = capital_ship
 		
 		add_stats = {
-			hg_attack = 14
+			hg_attack = 18
 			build_cost_ic = 1450
 		}
 		multiply_stats = {
@@ -235,7 +235,7 @@ equipment_modules = {
 		
 		add_stats = {
 			
-			hg_attack = 15
+			hg_attack = 20
 			build_cost_ic = 1650
 			
 		}
@@ -1915,7 +1915,7 @@ equipment_modules = {
 		gfx = ship_armor_1
 		
 		multiply_stats = {
-			build_cost_ic = 0.15
+			build_cost_ic = 0.25
 			naval_speed = -0.2
 			max_strength = 0.1
 		}
@@ -1951,7 +1951,7 @@ equipment_modules = {
 		gfx = ship_armor_2
 		
 		multiply_stats = {
-			build_cost_ic = 0.20
+			build_cost_ic = 0.25
 			naval_speed = -0.2
 			max_strength = 0.1
 		}
@@ -1969,7 +1969,7 @@ equipment_modules = {
 		gfx = ship_armor_thick_3
 		
 		multiply_stats = {
-			build_cost_ic = 0.25
+			build_cost_ic = 0.15
 			naval_speed = -0.2
 			max_strength = 0.15
 		}
@@ -2011,14 +2011,14 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.2
 			naval_speed = -0.25
-			max_strength = 0.25
+			max_strength = 0.15
 		}
 		build_cost_resources = {
 			steel = 2
 			chromium = 1
 		}
 		add_stats = {
-			armor_value = 75
+			armor_value = 55
 			surface_visibility = 10
 		}
 		dismantle_cost_ic = 8200

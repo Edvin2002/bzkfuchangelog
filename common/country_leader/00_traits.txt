@@ -28,6 +28,17 @@ leader_traits = {
 		}
 	}
 
+	head_of_intelligence = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.05
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	easy_surrender = {
 		random = no
 		surrender_limit = -0.10
@@ -265,6 +276,18 @@ leader_traits = {
 		}
 	}
 
+	old_figurehead = {
+	random = no
+	sprite = 13
+
+	political_power_factor = 0.1
+	stability_factor = 0.05
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 	### IDEA TRAITS ###
 
 	# drift is a percent applied weekly
@@ -278,6 +301,7 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
 
 	democratic_reformer = {
 		random = no
@@ -314,7 +338,7 @@ financial_expert = {
 		sprite = 10
 		random = yes
 		consumer_goods_factor = -0.05
-		
+
 		ai_will_do = {
 			factor = 2
 		}
@@ -323,7 +347,7 @@ financial_expert = {
 		sprite = 10
 		random = yes
 		production_factory_max_efficiency_factor = 0.05
-		
+
 		ai_will_do = {
 			factor = 2
 		}
@@ -432,6 +456,18 @@ financial_expert = {
 			factor = 1
 		}
 	}
+
+	lieutenant_of_industry = {
+	sprite = 10
+	random = yes
+	production_speed_industrial_complex_factor = 0.05
+	production_speed_infrastructure_factor = 0.05
+	production_speed_synthetic_refinery_factor = 0.05
+
+	ai_will_do = {
+		factor = 1
+	}
+}
 
 	armaments_organizer = {
 		sprite = 10
@@ -804,7 +840,7 @@ financial_expert = {
 		random = no
 		equipment_bonus = {
 			capital_ship = {
-				armor_value = 0.15 
+				armor_value = 0.15
 				hg_attack = 0.15
 			}
 			screen_ship = {
@@ -812,7 +848,7 @@ financial_expert = {
 				sub_detection = -0.25
 			}
 		}
-		
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -1352,7 +1388,7 @@ financial_expert = {
 		motorized_defence_factor = 0.15
 	mechanized_attack_factor = 0.15
 		mechanized_defence_factor = 0.15
-		
+
 		ai_will_do = {
 			factor = 3
 		}

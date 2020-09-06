@@ -1126,9 +1126,8 @@ tactic_planned_attack = { #GBP -> Armor attacker tactic
 	base =  { factor = 4 }
 	picture = tactic_planned_attack
 
-	combat_width = -0.5
-	attacker = 0.25
-	defender = -0.25
+	attacker = 0.35
+	defender = -0.05
 }
 
 tactic_default_planned_attack = { #GBP -> Armor attacker tactic
@@ -1143,9 +1142,8 @@ tactic_default_planned_attack = { #GBP -> Armor attacker tactic
 	base =  { factor = 4 }
 	picture = tactic_planned_attack
 
-	combat_width = -0.5
-	attacker = 0.25
-	defender = -0.25
+	attacker = 0.35
+	defender = -0.05
 }
 
 tactic_relentless_assault = { #Deep battle attacker tactic

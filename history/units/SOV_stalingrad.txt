@@ -1,0 +1,365 @@
+units = {
+
+division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.5
+	}
+		division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	division= {
+		name = "Armor Guard Division"
+		location = 3529
+		division_template = "Tank Korpus"
+		start_experience_factor = 0.5
+	}
+	}
+
+	

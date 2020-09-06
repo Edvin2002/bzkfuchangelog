@@ -1,14 +1,14 @@
 ﻿capital = 285
 
 oob = "AST_1936"
-set_stability = 0.8
+set_stability = 0.6
 set_war_support = 0.3
 set_research_slots = 3
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
@@ -20,7 +20,7 @@ set_technology = {
 	naval_bomber1 = 1
 	early_bomber = 1
 	CAS1 = 1
-	
+
 	trench_warfare = 1
 	fuel_silos = 1
 
@@ -62,6 +62,9 @@ if = {
 		has_dlc = "Together for Victory"
 	}
 	add_ideas = AST_great_depression_1
+	add_ideas = AST_white_policy
+	add_ideas = AST_army_1
+	add_ideas = AST_low_defence_spending
 
 	add_to_tech_sharing_group = commonwealth_research
 }
@@ -69,7 +72,7 @@ if = {
 1939.1.1 = {
 	add_political_power = 1198
 	oob = "AST_1939"
-	
+
 	if = {
 		limit = { has_dlc = "Together for Victory" }
 		complete_national_focus = AST_additional_militia_training
@@ -82,7 +85,7 @@ if = {
 		complete_national_focus = AST_industries_assistance_corporation
 		complete_national_focus = AST_western_australian_government_railways
 		complete_national_focus = AST_south_australian_housing_trust
-		
+
 		else = {
 			#generic focuses
 			complete_national_focus = army_effort
@@ -98,12 +101,12 @@ if = {
 	}
 
 	add_ideas = {
-		#laws		
-		volunteer_only
+		#laws
+		disarmed_nation
 		low_economic_mobilisation
 	}
 
-	
+
 	set_technology = {
 		fighter1 = 1
 		tactical_bomber1 = 1
@@ -116,7 +119,7 @@ if = {
 		infantry_weapons2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
-		
+
 
 		#doctrines
 		air_superiority = 1
@@ -172,27 +175,29 @@ set_popularities = {
 		democratic =   98
 		fascism = 0
 		communism =  2
-		 
- 
+
+
 	}
 set_politics = {
-
-	 
-	
 	ruling_party = democratic
 	last_election = "1934.9.15"
 	election_frequency = 36
 	elections_allowed = yes
 }
 
+country_event = {
+	id = australia_DSB.1
+	days = 1197
+}
+
 create_country_leader = {
-	name = "John Curtin"
+	name = "Joseph Lyons"
 	desc = "POLITICS_JOHN_CURTIN_DESC"
-	picture = "Portrait_Australia_John_Curtin.dds"
+	picture = "Joseph_Lyons.dds"
 	expire = "1965.1.1"
-	ideology = socialism
+	ideology = conservatism
 	traits = {
-		#
+		peace_time_rearmer
 	}
 }
 
@@ -257,25 +262,25 @@ create_corps_commander = {
 
 
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Thomas Blamey"
 	gfx = "GFX_AST_thomas_blamey"
-	traits = { panzer_leader }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 5
-}
-create_field_marshal = {
-	name = "Henry Wynter"
-	gfx = "GFX_AST_henry_wynter"
 	traits = { brilliant_strategist logistics_wizard organizer }
 	skill = 6
 	attack_skill = 6
 	defense_skill = 6
 	planning_skill = 5
 	logistics_skill = 6
+}
+create_corps_commander = {
+	name = "Henry Wynter"
+	gfx = "GFX_AST_henry_wynter"
+	traits = { infantry_leader }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 5
 }
 create_corps_commander = {
 	name = "Alan Vasey"
@@ -301,7 +306,7 @@ create_corps_commander = {
 	name = "John Northcott"
 	gfx = "GFX_AST_john_northcott"
 	traits = { panzer_leader}
-	skill = 1
+	skill = 3
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 3
@@ -342,12 +347,12 @@ create_navy_leader = {
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
-	
-	
+
+
 }
 
 if = {
-	limit = { has_dlc = "Man the Guns" } 
+	limit = { has_dlc = "Man the Guns" }
 	### Ship Variants ###
 	# Light Cruisers #
 	create_equipment_variant = {

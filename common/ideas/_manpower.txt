@@ -2,6 +2,7 @@ ideas = {
 
 	mobilization_laws = {
 		law = yes
+		use_list_view = yes
 
 		disarmed_nation = {
 
@@ -77,7 +78,7 @@ ideas = {
 						original_tag = AST
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_citizen_military_forces
+					has_completed_focus = AST_recruit_military
 				}
 				if = {
 					limit = {
@@ -134,8 +135,8 @@ ideas = {
 						original_tag = AST
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
+					has_completed_focus = AST_recruit_military
+					has_completed_focus = AST_second_imperial_force
 				}
 				if = {
 					limit = {
@@ -217,8 +218,8 @@ ideas = {
 						original_tag = AST
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
+					has_completed_focus = AST_recruit_military
+					has_completed_focus = AST_second_imperial_force
 				}
 
 				if = {
@@ -309,8 +310,8 @@ ideas = {
 						original_tag = AST
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
+					has_completed_focus = AST_recruit_military
+					has_completed_focus = AST_second_imperial_force
 				}
 
 				if = {
@@ -403,8 +404,8 @@ ideas = {
 						original_tag = AST
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
+					has_completed_focus = AST_recruit_military
+					has_completed_focus = AST_second_imperial_force
 				}
 
 				if = {

@@ -1,0 +1,265 @@
+add_namespace = australia_DSB
+
+# Lyons Passes Away
+country_event = {
+	id = australia_DSB.1
+	title = australia_DSB.1.t
+	desc = australia_DSB.1.d
+	picture = "GFX_report_event_lyon.dds"
+
+  is_triggered_only = yes
+
+
+	option = {
+		name = australia_DSB.1.a
+		if = {
+			limit = {
+				has_idea = AST_robert_g_menzies
+			 }
+			 remove_ideas = AST_robert_g_menzies
+		}
+		kill_country_leader = yes
+		if = {
+			limit = {
+				has_country_flag = pig_iron_sold
+			}
+			create_country_leader = {
+				name = "Robert Menzies"
+				desc = "POLITICS_ROBERT_MENZIES_DESC"
+				picture = "Robert_Menzies.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					minority_government
+					pig_iron_bob
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = pig_iron_sold
+				}
+			}
+			create_country_leader = {
+				name = "Robert Menzies"
+				desc = "POLITICS_ROBERT_MENZIES_DESC"
+				picture = "Robert_Menzies.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					minority_government
+				}
+		}
+
+	 }
+	 hidden_effect = {
+		 country_event = {
+			 id = australia_DSB.2
+			 days = 872
+		 }
+	 }
+	}
+}
+
+country_event = {
+	id = australia_DSB.2
+	title = australia_DSB.2.t
+	desc = australia_DSB.2.d
+	picture = "GFX_report_event_fadden.dds"
+
+
+
+  is_triggered_only = yes
+
+	option ={
+		name = australia_DSB.2.a
+		create_country_leader = {
+			name = "Arthur Fadden"
+			desc = "POLITICS_Fadden_DESC"
+			picture = "arthur_fadden.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+      failing_government
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = australia_DSB.3
+				days = 40
+			}
+		}
+	}
+}
+
+#Curtin takes office
+country_event = {
+	id = australia_DSB.3
+	title = australia_DSB.3.t
+	desc = australia_DSB.3.d
+	picture = "GFX_report_event_curtin.dds"
+
+
+
+  is_triggered_only = yes
+
+	option ={
+		name = australia_DSB.3.a
+		add_stability = 0.05
+		set_party_name = { ideology = democratic long_name = AST_Labor_party name = AST_Labor_party }
+		create_country_leader = {
+			name = "John Curtin"
+			desc = "POLITICS_JOHN_CURTIN_DESC"
+			picture = "Portrait_Australia_John_Curtin.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+			war_time_prime_minister
+			}
+		}
+	}
+}
+
+#second AIF
+country_event = {
+id = australia_DSB.4
+title = australia_DSB.4.t
+desc = australia_DSB.4.d
+picture = GFX_report_event_ast_planning
+
+
+
+is_triggered_only = yes
+
+#commit to asia
+option ={
+	name = australia_DSB.4.a
+	set_country_flag = AST_asia
+	hidden_effect = {
+		country_event = {
+			id = australia_DSB.5
+			days = 400
+		 }
+ }
+}
+#commit to Europe
+option ={
+	name = australia_DSB.4.b
+set_country_flag = AST_europe
+hidden_effect = {
+	country_event = {
+		id = australia_DSB.5
+		days = 400
+	 }
+  }
+
+ }
+
+ }
+
+
+#second AIF second event
+country_event = {
+id = australia_DSB.5
+title = australia_DSB.5.t
+desc = australia_DSB.5.d
+picture = GFX_report_event_ast_planning
+
+
+
+is_triggered_only = yes
+
+#commit to asia
+option ={
+	name = australia_DSB.5.a
+	set_country_flag = AST_asia
+	trigger = {
+  has_country_flag = AST_europe
+	 }
+}
+#commit to Europe
+option = {
+	name = australia_DSB.5.b
+  set_country_flag = AST_europe
+	trigger = {
+	has_country_flag = AST_asia
+	 }
+}
+}
+
+country_event = {
+id = australia_DSB.6
+title = australia_DSB.6.t
+desc = australia_DSB.6.d
+picture = GFX_report_event_ast_troops_landing
+
+
+
+is_triggered_only = yes
+
+
+option = {
+	name = australia_DSB.6.a
+  add_ideas = AST_battle
+	add_war_support = -0.10
+}
+
+}
+
+country_event = {
+	id = australia_DSB.7
+	title = australia_DSB.7.t
+	desc = australia_DSB.7.d
+	picture = GFX_report_event_ast_mediums
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = australia_DSB.7.a
+		add_tech_bonus = {
+			add_tech_bonus = {
+				name = AST_med
+				bonus = 1
+				uses = 1
+				technology = improved_medium_tank
+			}
+		}
+ }
+
+ option = {
+	 name = australia_DSB.7.b
+	 add_tech_bonus = {
+		 add_tech_bonus = {
+			 name = AST_light
+			 bonus = 1
+			 uses = 1
+			 technology = advanced_light_tank
+		 }
+	 }
+ }
+
+}
+
+country_event = {
+	id = australia_DSB.8
+	title = australia_DSB.8.t
+	desc = australia_DSB.8.d
+	picture = GFX_report_event_6th_division_staff
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = australia_DSB.8.a
+		add_war_support = 0.05
+		add_political_power = 100
+		set_country_flag = AST_blamey_chief
+		custom_effect_tooltip = available_chief_of_army
+		show_ideas_tooltip = AST_blamey
+ }
+
+
+
+}

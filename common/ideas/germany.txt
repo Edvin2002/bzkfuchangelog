@@ -41,7 +41,7 @@ ideas = {
 			modifier = {
 				army_org_Factor = 0.10
 				army_morale_factor = 0.10
-				army_armor_attack_factor = 0.10
+				army_armor_attack_factor = 0.15
 			}
 		}
 
@@ -576,11 +576,15 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_acquire_tanks
+			research_bonus = {
+				rocketry = 0.40
+				jet_technology = 0.10
+			}
+
+			picture = generic_research_bonus
 
 			modifier = {
-				supply_consumption_factor = -0.2
-				army_attack_factor = 0.05
+				production_speed_rocket_site_factor = 0.15
 			}
 
 		}
