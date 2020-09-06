@@ -616,25 +616,33 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
+
+			AST = {
+				 country_event = {
+					 id = australia_DSB.1
+					 days = 1197
+			 }
+			}
+
 		#456 = {
 		#add_province_modifier = {
 					#	static_modifiers = { deep_desert }
 						#province = {
-						#	id = 7216 
-					#		id = 10869 
-						#	id = 11974 
-						#	id = 12099 
-						#	id = 12733 
-						#	id = 12816 
-						#	id = 13218 
-					#		id = 13219 
-						#	id = 13220 
-						#	id = 13221 
-						#	id = 13222 
-						#	id = 13223  
-						#	id = 13224  
-						#	id = 13225 
-						#	id = 13235 
+						#	id = 7216
+					#		id = 10869
+						#	id = 11974
+						#	id = 12099
+						#	id = 12733
+						#	id = 12816
+						#	id = 13218
+					#		id = 13219
+						#	id = 13220
+						#	id = 13221
+						#	id = 13222
+						#	id = 13223
+						#	id = 13224
+						#	id = 13225
+						#	id = 13235
 						#}
 					#}
 		#}
@@ -644,13 +652,13 @@ on_actions = {
 				#		province = {
 				#			id = 10104
 				#			id = 13228
-				#			id = 13230 
+				#			id = 13230
 				#			id = 13229
 				#			id = 1140
 			#				id = 10785
 			#				id = 13231
 			#				id = 11951
-							 
+
 			#			}
 			#		}
 	#	}

@@ -112,17 +112,41 @@ spriteType = {
 		name = "GFX_report_event_fall_blau"
 		texturefile = "gfx/event_pictures/report_event_fall_blau.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_report_event_confused_hitler"
 		texturefile = "gfx/event_pictures/report_event_confused_hitler.dds"
 	}
-	
+
 	spriteType = {
 		name = "GFX_report_event_royalarmor"
 		texturefile = "gfx/event_pictures/report_event_royalarmor.dds"
 	}
-	
-	
+
+	spriteType = {
+		name = "GFX_report_event_6th_division_staff"
+		texturefile = "gfx/event_pictures/report_event_6th_division_staff.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ast_mediums"
+		texturefile = "gfx/event_pictures/report_event_ast_mediums.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_lyon.dds"
+		texturefile = "gfx/event_pictures/report_event_lyon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_curtin.dds"
+		texturefile = "gfx/event_pictures/report_event_curtin.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_fadden.dds"
+		texturefile = "gfx/event_pictures/report_event_fadden.dds"
+	}
+
+
+
 }
-	

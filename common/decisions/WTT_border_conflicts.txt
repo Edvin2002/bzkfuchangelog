@@ -278,17 +278,17 @@ CHI_border_clashes = {
 				attacker = {
 					state = var:FROM.attacker_state_vs_@ROOT
 					num_provinces = 4
-					on_win = wtt_border_conflict_won_attacker.1
-					on_lose = wtt_border_conflict_lost_attacker.1
-					on_cancel = wtt_border_conflict_canceled_attacker.1
+			#		on_win = wtt_border_conflict_won_attacker.1
+			#		on_lose = wtt_border_conflict_lost_attacker.1
+	  	#		on_cancel = wtt_border_conflict_canceled_attacker.1
 				}
 
 				defender = {
 					state = var:FROM.defender_state_vs_@ROOT
 					num_provinces = 4
-					on_win = wtt_border_conflict_won_defender.1
-					on_lose = wtt_border_conflict_lost_defender.1
-					on_cancel = wtt_border_conflict_canceled_defender.1
+				#	on_win = wtt_border_conflict_won_defender.1
+				#	on_lose = wtt_border_conflict_lost_defender.1
+				#	on_cancel = wtt_border_conflict_canceled_defender.1
 				}
 			}
 			FROM = {

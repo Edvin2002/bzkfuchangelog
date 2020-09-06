@@ -21,7 +21,7 @@ if = {
 		has_dlc = "La Resistance"
 	}
 	set_technology = {
-		armored_car1 = 1
+
 	}
 }
 
@@ -38,7 +38,7 @@ set_convoys = 20
 	complete_national_focus = industrial_effort
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
-	
+
 	set_technology = {
 		fighter1 = 1
 		fighter2 = 1
@@ -62,7 +62,7 @@ set_convoys = 20
 		fighter_baiting = 1
 		low_echelon_support = 1
 		dispersed_fighting = 1
-		
+
 			grand_battle_plan = 1
 
 		trench_warfare = 1

@@ -1,4 +1,4 @@
-﻿capital = 500
+﻿capital = 721
 
 
 oob = "BRA_1936"
@@ -11,7 +11,7 @@ set_country_flag = monroe_doctrine
 1939.1.1 = {
 
 	add_political_power = 0
-	
+
 	#generic focuses
 	complete_national_focus = army_effort
 	complete_national_focus = equipment_effort
@@ -22,14 +22,14 @@ set_country_flag = monroe_doctrine
 	complete_national_focus = industrial_effort
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
-	
+
 	oob = "BRA_1939"
 	set_technology = {
 		interwar_artillery = 1
 		infantry_weapons1 = 1
 		infantry_weapons2 = 1
 		support_weapons = 1
-		
+
 
 		#doctrines
 		air_superiority = 1
@@ -60,19 +60,19 @@ set_country_flag = monroe_doctrine
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 	}
-	
+
 }
  set_popularities = {
 		democratic =   0
-		fascism = 0 
+		fascism = 0
 		communism =  0
 		neutrality =  100
- 
+
 	}
 set_politics = {
 
-	 
-	
+
+
 	ruling_party = neutrality
 	last_election = "1934.7.17"
 	election_frequency = 48

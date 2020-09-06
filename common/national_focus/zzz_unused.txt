@@ -2096,7 +2096,7 @@ focus_tree = {
 	}
 
 
-	
+
 
 	focus = {
 		id = SPR_maintain_the_second_republic
@@ -2279,7 +2279,60 @@ focus_tree = {
 
 		completion_reward = { }
 	}
+	focus = {
+		id = USA_suspend_the_presecution
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
 
+		completion_reward = { }
+	}
+	focus = {
+		id = SPA_a_great_spain
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		completion_reward = { }
+	}
+	focus = {
+		id = FRA_the_council_of_rambouillet
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		completion_reward = { }
+	}
+	focus = {
+		id = POR_support_the_spanish_republic
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		completion_reward = { }
+	}
+	focus = {
+		id = POR_support_a_spanish_monarchy_in_the_war
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		completion_reward = { }
+	}
+	focus = {
+		id = POR_support_the_spanish_nationalists
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		completion_reward = { }
+	}
 
 
 
